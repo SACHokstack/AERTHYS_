@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(for file in about.html products.html why-microgreens.html about-microgreens.html team.html contact.html)",
+      "Bash(do sed -i 's/Poppins/Inter/g' \"$file\")",
+      "Bash(done)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
