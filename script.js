@@ -157,7 +157,7 @@ const observer = new IntersectionObserver(function(entries) {
 
 // Add animation to cards and sections on scroll
 document.addEventListener('DOMContentLoaded', function() {
-    const animatedElements = document.querySelectorAll('.feature-card, .product-card, .benefit-item, .use-case-card, .team-member, .sustainability-card, .variety-card, .process-step, .founder-journey-section, .sustainability-new-section, .timeline-section, .about-cta-section, .sustainability-new-card, .timeline-step');
+    const animatedElements = document.querySelectorAll('.feature-card, .product-card, .benefit-item, .use-case-card, .team-member, .sustainability-card, .variety-card, .process-step, .founder-journey-section, .sustainability-new-section, .timeline-section, .about-cta-section, .sustainability-new-card, .timeline-step, .products-hero, .products-grid-section, .delivery-info, .delivery-model-conversion, .final-cta-gradient');
 
     animatedElements.forEach(el => {
         el.style.opacity = '0';
