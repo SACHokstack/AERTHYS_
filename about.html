@@ -7,12 +7,10 @@
     <title>About Aerthys - Our Story & Sustainability Mission</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,700,500,400&f[]=general-sans@700,600,500,400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="about-page">
+<body class="about-page-new">
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="nav-brand">
@@ -35,69 +33,111 @@
         </div>
     </nav>
 
-    <!-- Full-Screen Hero -->
-    <section class="about-hero">
-        <div class="about-hero-overlay"></div>
-        <div class="about-hero-content">
-            <h1 class="about-hero-title">About Aerthys</h1>
-            <p class="about-hero-tagline">Growing sustainably, delivering freshly</p>
+    <!-- Founder's Journey - 2 Column Story -->
+    <section class="founder-journey-section">
+        <div class="container">
+            <div class="founder-journey-grid">
+                <div class="founder-journey-text">
+                    <h1>Our Founder's Journey</h1>
+                    <p>Aerthys was born from a deep connection to the land and a vision for sustainable agriculture. Our founder, <strong>Theivanth Rajamohan</strong>, spent his childhood at his grandmother's village farm, where he learned the rhythms of nature and the value of working with the earth.</p>
+                    <p>Years later, while studying at Singapore Management University, Theivanth participated in a sustainability program that rekindled his passion for agriculture. He recognized the urgent need for farming practices that nourish both people and the planet.</p>
+                    <blockquote class="founder-quote">
+                        "We're not just growing greens—we're cultivating a future where food is fresh, sustainable, and deeply connected to community."
+                    </blockquote>
+                    <p>This realization led him to specialize in sustainable agriculture and ultimately to establish Aerthys — bringing ultra-fresh, nutrient-dense greens to local restaurants, hotels, and wellness businesses.</p>
+                </div>
+                <div class="founder-journey-image">
+                    <img src="assets/about-bg.jpg" alt="Aerthys Rooftop Farm" class="founder-journey-img">
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Founder Story - Two Column -->
-    <section class="founder-section fade-in">
+    <!-- Sustainability Focus - 3 Cards on Mint Background -->
+    <section class="sustainability-new-section">
         <div class="container">
-            <div class="founder-grid">
-                <div class="founder-text">
-                    <h2>Our Founder's Story</h2>
-                    <p>Aerthys was born from a deep connection to the land and a vision for sustainable agriculture. Our founder, Theivanth Rajamohan, spent his childhood at his grandmother's village farm, where he learned the rhythms of nature and the value of working with the earth.</p>
-                    <p>Years later, while studying at Singapore Management University, Theivanth participated in a sustainability program that rekindled his passion for agriculture. He recognized the urgent need for farming practices that nourish both people and the planet.</p>
-                    <p>This realization led him to specialize in sustainable agriculture and ultimately to establish Aerthys — bringing ultra-fresh, nutrient-dense greens to local restaurants, hotels, and wellness businesses.</p>
+            <h2 class="sustainability-new-title">Our Sustainability Focus</h2>
+            <p class="sustainability-new-subtitle">Three pillars of eco-conscious farming</p>
+            <div class="sustainability-new-grid">
+                <div class="sustainability-new-card">
+                    <div class="sustainability-new-icon">💧</div>
+                    <h3>90% Less Water</h3>
+                    <p>Hydroponic rooftop trays use recirculating systems, making every drop count.</p>
                 </div>
-                <div class="founder-image">
-                    <div class="founder-image-wrapper">
-                        <img src="assets/Aerthys_logo.jpeg" alt="Aerthys Microgreens" class="founder-img">
+                <div class="sustainability-new-card">
+                    <div class="sustainability-new-icon">🚫</div>
+                    <h3>Zero Pesticides</h3>
+                    <p>Natural pest control with companion planting keeps our greens pure and safe.</p>
+                </div>
+                <div class="sustainability-new-card">
+                    <div class="sustainability-new-icon">🌱</div>
+                    <h3>Hyper-Local</h3>
+                    <p>Same-day harvest to plate in Coimbatore, minimizing carbon footprint.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline - From Village to Rooftop -->
+    <section class="timeline-section">
+        <div class="container">
+            <h2 class="timeline-title">From Village to Rooftop</h2>
+            <p class="timeline-subtitle">A journey of passion, learning, and purpose</p>
+        </div>
+        <div class="timeline-scroll-container">
+            <div class="timeline-track">
+                <div class="timeline-step">
+                    <div class="timeline-step-image">
+                        <img src="assets/chapter1.jpg" alt="Childhood on grandmother's farm">
+                    </div>
+                    <div class="timeline-step-content">
+                        <span class="timeline-step-label">Chapter 1</span>
+                        <h3>Roots in the Village</h3>
+                        <p>Childhood summers spent learning traditional farming at grandmother's village, where seeds of sustainability were planted.</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-step-image">
+                        <img src="assets/chapter2.jpg" alt="Sustainability studies in Singapore">
+                    </div>
+                    <div class="timeline-step-content">
+                        <span class="timeline-step-label">Chapter 2</span>
+                        <h3>Education & Awakening</h3>
+                        <p>Singapore Management University's sustainability program reignited the passion for agriculture with a modern, eco-conscious lens.</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-step-image">
+                        <img src="assets/chapter3.jpg" alt="Aerthys rooftop farms today">
+                    </div>
+                    <div class="timeline-step-content">
+                        <span class="timeline-step-label">Chapter 3</span>
+                        <h3>Aerthys is Born</h3>
+                        <p>Urban rooftop farms in Coimbatore delivering same-day freshness — merging tradition with innovation for a sustainable future.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sustainability Focus - 3 Card Grid -->
-    <section class="sustainability-focus-section fade-in">
-        <div class="container">
-            <h2 class="section-title-center">Our Sustainability Focus</h2>
-            <div class="sustainability-cards-grid">
-                <div class="sustain-card">
-                    <div class="sustain-icon">💧</div>
-                    <h3>90% Less Water</h3>
-                    <p>Hydroponic rooftop trays use recirculating systems, making every drop count.</p>
-                </div>
-                <div class="sustain-card">
-                    <div class="sustain-icon">🚫</div>
-                    <h3>Zero Pesticides</h3>
-                    <p>Natural pest control with companion planting keeps our greens pure and safe.</p>
-                </div>
-                <div class="sustain-card">
-                    <div class="sustain-icon">🌱</div>
-                    <h3>Hyper-Local</h3>
-                    <p>Same-day harvest to plate in Coimbatore, minimizing carbon footprint.</p>
-                </div>
-            </div>
-            <div class="sustain-cta">
-                <a href="contact.html" class="btn btn-sustain">Partner with Us</a>
-            </div>
+    <!-- CTA Section - Partner with Us -->
+    <section class="about-cta-section">
+        <div class="about-cta-content">
+            <h2>Ready to Elevate Your Menu?</h2>
+            <p>Partner with Aerthys for the freshest, most sustainable microgreens in Coimbatore.</p>
+            <a href="contact.html" class="btn btn-about-cta">Partner with Us</a>
         </div>
     </section>
 
-    <footer class="footer">
+    <!-- Footer - Light & Clean -->
+    <footer class="footer-light">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
+            <div class="footer-light-grid">
+                <div class="footer-light-col">
                     <h4>Aerthys</h4>
-                    <p>Sustainably grown microgreens.</p>
+                    <p>Premium microgreens grown sustainably.</p>
                 </div>
-                <div class="footer-col">
+                <div class="footer-light-col">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
@@ -106,7 +146,7 @@
                         <li><a href="why-microgreens.html">Why Microgreens</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
+                <div class="footer-light-col">
                     <h4>More</h4>
                     <ul>
                         <li><a href="about-microgreens.html">About Microgreens</a></li>
@@ -114,50 +154,18 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
+                <div class="footer-light-col">
                     <h4>Contact</h4>
                     <p>Email: info.aerthys@gmail.com</p>
                     <p>Phone: +91 97916 47818</p>
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div class="footer-light-bottom">
                 <p>&copy; 2025 Aerthys. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        lucide.createIcons();
-
-        // Smooth scroll for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-
-        // Fade-in on scroll
-        const fadeElements = document.querySelectorAll('.fade-in');
-
-        const fadeInOnScroll = () => {
-            fadeElements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-
-                if (elementTop < windowHeight * 0.85) {
-                    element.classList.add('fade-in-visible');
-                }
-            });
-        };
-
-        window.addEventListener('scroll', fadeInOnScroll);
-        window.addEventListener('load', fadeInOnScroll);
-        fadeInOnScroll(); // Initial check
-    </script>
 </body>
 </html>
