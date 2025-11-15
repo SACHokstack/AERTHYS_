@@ -3620,3 +3620,372 @@ body.about-page.has-bg-image .impact-list li strong {
     color: #1a5f3a;
     border-color: #d4af37;
 }
+
+/* ===========================
+   Why Microgreens Page - Premium Styling
+   =========================== */
+
+/* Hero Section - Full-width background */
+.why-microgreens-hero {
+    position: relative;
+    background: linear-gradient(135deg, rgba(26, 95, 58, 0.9) 0%, rgba(74, 222, 128, 0.8) 100%), url('assets/about-bg.jpg') center/cover;
+    color: white;
+    padding: 140px 5% 120px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.why-hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    letter-spacing: -0.02em;
+}
+
+.why-hero-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #d4af37;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.why-hero-description {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+    font-weight: 400;
+    opacity: 0.95;
+}
+
+.btn-hero-gold {
+    background: #d4af37;
+    color: #1a5f3a;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-hero-gold:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(212, 175, 55, 0.4);
+    background: #f0c443;
+}
+
+/* The Numbers Speak - Premium Grid */
+.aerthys-difference-section {
+    padding: 7rem 0;
+    background: #f8fff9;
+}
+
+.section-title-center {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 4.5vw, 3.5rem);
+    font-weight: 700;
+    color: #1a5f3a;
+    text-align: center;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.section-subtitle-source {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 4rem;
+    font-style: italic;
+}
+
+.premium-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.premium-stat-card {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    text-align: center;
+    border: 2px solid rgba(168, 213, 186, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.premium-stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #1a5f3a, #A8D5BA);
+}
+
+.premium-stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(26, 95, 58, 0.15);
+    border-color: #A8D5BA;
+}
+
+.stat-number-large {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: #d4af37;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+}
+
+.stat-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1a5f3a;
+    margin-bottom: 0.5rem;
+}
+
+.stat-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Exclusive Badges Section */
+.exclusive-badges-section {
+    padding: 7rem 0;
+    background: white;
+}
+
+.badges-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 4rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.exclusive-badges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.exclusive-badge {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fff9 100%);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    text-align: center;
+    border: 2px solid #A8D5BA;
+    box-shadow: 0 8px 30px rgba(168, 213, 186, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.exclusive-badge::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, #1a5f3a, #A8D5BA);
+    border-radius: 22px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.exclusive-badge:hover::before {
+    opacity: 1;
+}
+
+.exclusive-badge:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(168, 213, 186, 0.3);
+}
+
+.badge-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.exclusive-badge h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a5f3a;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+}
+
+.exclusive-badge p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+/* Key Benefits - Premium Cards */
+.key-benefits-section {
+    padding: 7rem 0;
+    background: #f8fff9;
+}
+
+.benefits-premium-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.benefit-premium-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border: 1px solid rgba(168, 213, 186, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.benefit-premium-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(26, 95, 58, 0.12);
+    border-color: #A8D5BA;
+}
+
+.benefit-premium-card .benefit-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.benefit-premium-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1a5f3a;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+}
+
+.benefit-premium-card p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Mobile Responsive - Why Microgreens Page */
+@media (max-width: 768px) {
+    .why-microgreens-hero {
+        padding: 120px 5% 100px;
+    }
+    
+    .why-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .why-hero-subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .why-hero-description {
+        font-size: 1.1rem;
+    }
+    
+    .btn-hero-gold {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+    }
+    
+    .aerthys-difference-section,
+    .exclusive-badges-section,
+    .key-benefits-section {
+        padding: 5rem 0;
+    }
+    
+    .premium-stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .premium-stat-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .stat-number-large {
+        font-size: 2rem;
+    }
+    
+    .exclusive-badges-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .exclusive-badge {
+        padding: 2.5rem 1.5rem;
+    }
+    
+    .benefits-premium-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .benefit-premium-card {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .why-microgreens-hero {
+        padding: 100px 5% 80px;
+    }
+    
+    .why-hero-title {
+        font-size: 2rem;
+    }
+    
+    .why-hero-subtitle {
+        font-size: 1.25rem;
+    }
+    
+    .premium-stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .exclusive-badge h4 {
+        font-size: 1.25rem;
+    }
+    
+    .exclusive-badge p {
+        font-size: 1rem;
+    }
+}
