@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aerthys - Coimbatore's rooftop microgreens farm providing restaurants and wellness businesses with sustainably grown, pesticide-free, nutrient-dense greens.">
-    <title>Aerthys - Sustainably Grown Microgreens | Coimbatore</title>
+    <meta name="description" content="Aerthys - Premium microgreens for the finest restaurants & wellness brands. Sustainably grown, pesticide-free, nutrient-dense.">
+    <title>Aerthys - Premium Microgreens</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;600;700;800&family=General+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,700,500,400&f[]=general-sans@700,600,500,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
+<body class="index-page">
     <nav class="navbar">
         <div class="container">
-            <div class="nav-brand">Aerthys</div>
+            <a href="index.html" class="nav-brand">
+                <img src="assets/Aerthys_logo.jpeg" alt="Aerthys" class="logo">
+            </a>
             <button class="nav-toggle" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
@@ -33,121 +35,127 @@
         </div>
     </nav>
 
-    <header class="hero">
-        <div class="hero-bg-pattern"></div>
-        <div class="hero-gradient"></div>
-        <div class="hero-content">
-            <div class="badge">🌱 Rooftop Farm • Coimbatore</div>
-            <h1 class="hero-title">
-                <span class="gradient-text">Sustainably Grown.</span><br>
-                Freshly Harvested.<br>
-                Pesticide Free.
-            </h1>
-            <p class="hero-description">Aerthys is Coimbatore's rooftop microgreens farm, providing restaurants and wellness businesses with nutrient-dense greens grown locally under sustainable, controlled conditions.</p>
-            <div class="hero-links">
-                <a href="products.html" class="btn btn-primary">
-                    <span>Explore Products</span>
-                    <i data-lucide="arrow-right"></i>
-                </a>
-                <a href="why-microgreens.html" class="btn btn-secondary">
-                    <span>Learn More</span>
-                </a>
+    <!-- Hero Section - Premium -->
+    <section class="hero-premium">
+        <div class="hero-premium-bg" id="heroBg"></div>
+        <div class="hero-premium-overlay"></div>
+        <div class="hero-premium-content">
+            <h1 class="hero-premium-title">Rooftop Microgreens: Sustainably Grown, Same-Day Delivered.</h1>
+            <p class="hero-premium-subtitle">Nutrient-dense greens from urban farms—elevating your dishes with unmatched freshness and purity.</p>
+            <div class="hero-premium-buttons">
+                <a href="products.html" class="btn btn-premium-primary">Discover Varieties</a>
+                <a href="about.html" class="btn btn-premium-secondary">Our Farms</a>
             </div>
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <div class="stat-value">90%</div>
-                    <div class="stat-label">Less Water</div>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <div class="stat-value">40×</div>
-                    <div class="stat-label">More Nutrients</div>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <div class="stat-value">0</div>
-                    <div class="stat-label">Pesticides</div>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <i data-lucide="chevron-down"></i>
-        </div>
-    </header>
-
-    <section class="intro-section">
-        <div class="container">
-            <h2>Fresh, Local, and Sustainable</h2>
-            <p>Founded by Theivanth Rajamohan, Aerthys brings together a passion for sustainable agriculture and a commitment to providing the freshest, most nutritious microgreens to Coimbatore's food and wellness industry. Our rooftop farm produces pesticide-free greens year-round, delivered within hours of harvest to ensure peak freshness and flavor.</p>
-            <p>We believe in farming that works with nature, not against it. By growing locally and sustainably, we reduce food miles, conserve water, and deliver produce that is better for you and better for the planet.</p>
         </div>
     </section>
 
-    <section class="features-section">
+    <!-- Trust Bar - Mint Background with White Cards -->
+    <section class="trust-bar-new">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Why Choose Aerthys</h2>
-                <p class="section-description">Four pillars of sustainable excellence</p>
+            <div class="trust-cards-grid">
+                <div class="trust-card-new">
+                    <div class="trust-card-number">90%</div>
+                    <div class="trust-card-label">Less Water</div>
+                </div>
+                <div class="trust-card-new">
+                    <div class="trust-card-number">40×</div>
+                    <div class="trust-card-label">More Nutrients</div>
+                </div>
+                <div class="trust-card-new">
+                    <div class="trust-card-number">0</div>
+                    <div class="trust-card-label">Pesticides</div>
+                </div>
             </div>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon-wrapper">
-                        <i data-lucide="leaf" class="feature-icon"></i>
+        </div>
+    </section>
+
+    <!-- Fresh, Local, and Sustainable - 2 Column Story -->
+    <section class="story-section-new">
+        <div class="container">
+            <div class="story-grid-new">
+                <div class="story-text-new">
+                    <h2>Fresh, Local, and Sustainable</h2>
+                    <p>Founded by Theivanth Rajamohan, Aerthys brings a passion for sustainable agriculture and a commitment to freshness.</p>
+                    <p>Our rooftop farms deliver same-day harvest-to-plate greens — pesticide-free, nutrient-dense, ultra-local.</p>
+                    <p>Every batch is grown with care in Coimbatore's urban farms, ensuring maximum freshness and minimal environmental impact.</p>
+                </div>
+                <div class="story-image-new">
+                    <img src="assets/hero-bg.jpg" alt="Aerthys Rooftop Farm" class="story-img-new">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Anchor Strip - Rooftop to Table -->
+    <section class="anchor-strip">
+        <div class="anchor-strip-bg"></div>
+        <div class="anchor-strip-overlay"></div>
+        <div class="anchor-strip-content">
+            <p>From Rooftop to Table — In Hours</p>
+        </div>
+    </section>
+
+    <!-- Why Choose Aerthys - 4 Pillars -->
+    <section class="why-section">
+        <div class="container">
+            <div class="why-header">
+                <h2>Why Choose Aerthys</h2>
+                <p>Four pillars of sustainable excellence</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i data-lucide="leaf"></i>
                     </div>
                     <h3>Pesticide-Free</h3>
-                    <p>Grown in controlled indoor conditions with zero pesticides, ensuring pure and safe produce for your customers.</p>
-                    <div class="card-shine"></div>
+                    <p>Grown in controlled conditions with zero chemicals.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon-wrapper">
-                        <i data-lucide="droplet" class="feature-icon"></i>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i data-lucide="droplet"></i>
                     </div>
                     <h3>Water Efficient</h3>
-                    <p>Uses 90% less water than conventional farming, making our practices truly sustainable and eco-friendly.</p>
-                    <div class="card-shine"></div>
+                    <p>Uses 90% less water than traditional farming.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon-wrapper">
-                        <i data-lucide="truck" class="feature-icon"></i>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i data-lucide="truck"></i>
                     </div>
                     <h3>Hyper-Local Delivery</h3>
-                    <p>Harvested and delivered within Coimbatore on the same day, dramatically reducing carbon emissions from transport.</p>
-                    <div class="card-shine"></div>
+                    <p>Harvested and delivered same day.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon-wrapper">
-                        <i data-lucide="zap" class="feature-icon"></i>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i data-lucide="dna"></i>
                     </div>
                     <h3>Nutrient-Dense</h3>
-                    <p>Microgreens contain 4–40× more vitamins and antioxidants than their mature counterparts.</p>
-                    <div class="card-shine"></div>
+                    <p>4–40× more vitamins than mature greens.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="cta-section">
-        <div class="cta-gradient"></div>
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Transform Your Menu?</h2>
-                <p>Partner with Aerthys for a consistent supply of the freshest, most sustainable microgreens in Coimbatore.</p>
-                <a href="contact.html" class="btn btn-cta">
-                    <span>Get in Touch</span>
-                    <i data-lucide="arrow-right"></i>
-                </a>
-            </div>
+    <!-- CTA Section - Premium -->
+    <section class="cta-section-premium">
+        <div class="cta-premium-content">
+            <h2>Curate Your Signature Greens?</h2>
+            <p>Partner with Aerthys for the freshest, most sustainable microgreens in Coimbatore.</p>
+            <a href="contact.html" class="btn btn-cta-premium">
+                <span>Get in Touch</span>
+                <i data-lucide="arrow-right"></i>
+            </a>
         </div>
     </section>
 
-    <footer class="footer">
+    <!-- Footer - Clean & Professional -->
+    <footer class="footer-new">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
+            <div class="footer-new-grid">
+                <div class="footer-new-col">
                     <h4>Aerthys</h4>
-                    <p>Sustainably grown microgreens from Coimbatore's rooftop farms.</p>
+                    <p>Premium microgreens grown sustainably.</p>
                 </div>
-                <div class="footer-col">
+                <div class="footer-new-col">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
@@ -156,7 +164,7 @@
                         <li><a href="why-microgreens.html">Why Microgreens</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
+                <div class="footer-new-col">
                     <h4>More</h4>
                     <ul>
                         <li><a href="about-microgreens.html">About Microgreens</a></li>
@@ -164,13 +172,13 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
+                <div class="footer-new-col">
                     <h4>Contact</h4>
                     <p>Email: info.aerthys@gmail.com</p>
                     <p>Phone: +91 97916 47818</p>
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div class="footer-new-bottom">
                 <p>&copy; 2025 Aerthys. All rights reserved.</p>
             </div>
         </div>
@@ -179,6 +187,26 @@
     <script src="script.js"></script>
     <script>
         lucide.createIcons();
+
+        // Parallax effect for hero background
+        const heroBg = document.getElementById('heroBg');
+        if (heroBg) {
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const parallaxSpeed = 0.5; // 50% slower (20% slower would be 0.8)
+                heroBg.style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
+            });
+        }
+
+        // Fade-in animation on load
+        window.addEventListener('load', () => {
+            const heroContent = document.querySelector('.hero-premium-content');
+            if (heroContent) {
+                setTimeout(() => {
+                    heroContent.classList.add('fade-in-active');
+                }, 500);
+            }
+        });
     </script>
 </body>
 </html>

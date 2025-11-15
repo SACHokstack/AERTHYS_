@@ -3,7 +3,9 @@
     "allow": [
       "Bash(for file in about.html products.html why-microgreens.html about-microgreens.html team.html contact.html)",
       "Bash(do sed -i 's/Poppins/Inter/g' \"$file\")",
-      "Bash(done)"
+      "Bash(done)",
+      "Bash(for file in /home/sach/aerthys/about.html /home/sach/aerthys/products.html /home/sach/aerthys/why-microgreens.html /home/sach/aerthys/about-microgreens.html /home/sach/aerthys/team.html /home/sach/aerthys/contact.html)",
+      "Bash(do sed:*)"
     ],
     "deny": [],
     "ask": []

@@ -167,6 +167,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Trust Cards Fade-in Animation on Scroll
+document.addEventListener('DOMContentLoaded', function() {
+    const trustCards = document.querySelectorAll('.trust-card-new');
+
+    const trustCardObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-visible');
+            }
+        });
+    }, {
+        threshold: 0.2,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    trustCards.forEach(card => {
+        trustCardObserver.observe(card);
+    });
+});
+
 // ===========================
 // Add active class to current page in nav
 // ===========================
@@ -180,4 +200,16 @@ document.addEventListener('DOMContentLoaded', function() {
             link.classList.add('active');
         }
     });
+});
+
+// ===========================
+// Navbar Scroll Effect
+// ===========================
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
 });
