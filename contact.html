@@ -1,206 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Aerthys for fresh microgreens delivery in Coimbatore. Schedule a farm tour or request a quote for your business.">
-    <title>Contact Us - Aerthys Microgreens</title>
+    <meta name="description"
+        content="Contact Aerthys about fresh microgreens delivery, restaurant partnerships, or schedule a rooftop farm tour in Coimbatore.">
+    <title>Contact Aerthys - Let's Grow Together</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="homepage-fresh.css">
+    <link rel="stylesheet" href="contact-premium.css">
+
+    <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="nav-brand">
-                <img src="assets/Aerthys_logo.jpeg" alt="Aerthys" class="logo">
+
+<body class="contact-page">
+
+    <!-- Navbar -->
+    <nav class="navbar-fresh">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand-fresh">
+                <img src="assets/Aerthys_logo.svg" alt="Aerthys" class="logo-fresh">
+                <i data-lucide="leaf" class="logo-leaf"></i>
             </a>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="why-microgreens.html">Why Microgreens</a></li>
-                <li><a href="about-microgreens.html">About Microgreens</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+
+            <ul class="nav-menu-fresh">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="products.html" class="nav-link">Shop</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="why-microgreens.html" class="nav-link">Why Microgreens</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
             </ul>
+
+            <div class="nav-actions">
+                <a href="products.html" class="cart-btn" style="text-decoration:none;">
+                    <i data-lucide="shopping-cart"></i>
+                </a>
+                <button class="mobile-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <section class="page-header">
-        <div class="container">
-            <h1>Get in Touch</h1>
-            <p>We'd love to hear from you</p>
+    <!-- Hero Section -->
+    <header class="contact-hero">
+        <h1 class="hero-headline">Let's Grow Together</h1>
+        <p class="hero-subhead">Whether you're a home chef, restaurant owner, or just curious about fresh greens—we'd
+            love to hear from you.</p>
+        <div class="hero-badges">
+            <span class="hero-badge"><i data-lucide="truck" width="16"></i> Same-day Delivery</span>
+            <span class="hero-badge"><i data-lucide="map-pin" width="16"></i> Farm Tours Available</span>
+            <span class="hero-badge"><i data-lucide="chef-hat" width="16"></i> Custom Orders</span>
         </div>
-    </section>
+    </header>
 
-    <section class="content-section">
-        <div class="container">
-            <div class="contact-layout">
-                <div class="contact-form-section">
-                    <h2>Send Us a Message</h2>
-                    <p>Schedule a farm tour, request a quote, or discuss your bulk order needs. We're here to help!</p>
+    <!-- Split Layout Main Content -->
+    <div class="split-container">
 
-                    <form id="contact-form" class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Name *</label>
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="business">Business/Organization</label>
-                            <input type="text" id="business" name="business" placeholder="Your Business Name">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+91 12345 67890">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Message *</label>
-                            <textarea id="message" name="message" rows="6" placeholder="Tell us about your inquiry..." required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary">Send Inquiry</button>
-                    </form>
+        <!-- LEFT: Interactive Form -->
+        <div class="form-container">
+            <div class="form-card">
+                <div class="form-header">
+                    <h2><i data-lucide="sprout" style="color:var(--forest-premium)"></i> Send a Message</h2>
+                    <div class="progress-dots">
+                        <div class="dot active"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
                 </div>
 
-                <div class="contact-info-section">
-                    <h2>Contact Information</h2>
+                <form class="contact-form" id="contact-form">
+                    <!-- Name -->
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <i data-lucide="user" class="input-icon" width="18"></i>
+                            <input type="text" id="name" class="form-input" placeholder="Your Name" required>
+                        </div>
+                        <span class="error-msg">Please enter your name</span>
+                    </div>
 
-                    <div class="contact-detail">
-                        <div class="contact-icon">📧</div>
-                        <div class="contact-text">
-                            <h3>Email</h3>
-                            <p><a href="mailto:info.aerthys@gmail.com">info.aerthys@gmail.com</a></p>
+                    <!-- Email -->
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <i data-lucide="mail" class="input-icon" width="18"></i>
+                            <input type="email" id="email" class="form-input" placeholder="your.email@example.com"
+                                required>
+                        </div>
+                        <span class="error-msg">Please enter a valid email</span>
+                    </div>
+
+                    <!-- Phone (Optional but recommended) -->
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <i data-lucide="phone" class="input-icon" width="18"></i>
+                            <input type="tel" id="phone" class="form-input" placeholder="+91 97916 47818">
                         </div>
                     </div>
 
-                    <div class="contact-detail">
-                        <div class="contact-icon">📱</div>
-                        <div class="contact-text">
-                            <h3>Phone</h3>
-                            <p><a href="tel:+919791647818">+91 97916 47818</a></p>
+                    <!-- Custom Order Type -->
+                    <div class="form-group">
+                        <input type="hidden" id="order-type">
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select-trigger">
+                                <span style="color:#666; font-size:0.95rem;">Select Inquiry Type *</span>
+                                <i data-lucide="chevron-down" width="16"></i>
+                            </div>
+                            <div class="custom-options">
+                                <div class="option" data-value="personal">
+                                    <span class="option-icon">🏡</span>
+                                    <div>
+                                        <span class="option-text">Personal Order</span>
+                                        <span class="option-desc">Fresh greens for your home</span>
+                                    </div>
+                                </div>
+                                <div class="option" data-value="restaurant">
+                                    <span class="option-icon">🍽️</span>
+                                    <div>
+                                        <span class="option-text">Restaurant Partner</span>
+                                        <span class="option-desc">Consistent bulk supply</span>
+                                    </div>
+                                </div>
+                                <div class="option" data-value="inquiry">
+                                    <span class="option-icon">💬</span>
+                                    <div>
+                                        <span class="option-text">General Inquiry</span>
+                                        <span class="option-desc">Questions & Info</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="contact-detail">
-                        <div class="contact-icon">📍</div>
-                        <div class="contact-text">
-                            <h3>Location</h3>
-                            <p>Coimbatore, Tamil Nadu, India</p>
+                    <!-- Address (Hidden by default) -->
+                    <div class="form-group" id="address-group" style="display:none;">
+                        <div class="input-wrapper">
+                            <i data-lucide="map-pin" class="input-icon" width="18"></i>
+                            <input type="text" id="address" class="form-input"
+                                placeholder="Delivery Area / Address (Optional)">
                         </div>
                     </div>
 
-                    <div class="contact-detail">
-                        <div class="contact-icon">🕒</div>
-                        <div class="contact-text">
-                            <h3>Business Hours</h3>
-                            <p>Monday - Saturday: 8:00 AM - 6:00 PM</p>
-                            <p>Sunday: Closed</p>
+                    <!-- Message -->
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <i data-lucide="message-square" class="input-icon" width="18" style="top: 1.2rem;"></i>
+                            <textarea id="message" class="form-textarea" placeholder="Tell us about your needs..."
+                                required></textarea>
                         </div>
+                        <span class="error-msg">Don't be shy, say hello!</span>
                     </div>
 
-                    <div class="cta-box">
-                        <h3>Interested in a Farm Tour?</h3>
-                        <p>We welcome visits from potential partners and customers. See our rooftop farm in action and learn more about our growing process!</p>
+                    <button type="submit" class="submit-btn" disabled>
+                        Send Inquiry <i data-lucide="arrow-right" width="18"></i>
+                    </button>
+                </form>
+
+                <!-- Success State -->
+                <div class="success-card">
+                    <div class="success-icon">
+                        <i data-lucide="check" width="40"></i>
                     </div>
+                    <h3
+                        style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--forest-premium); margin-bottom: 0.5rem;">
+                        Message Sent!</h3>
+                    <p style="color: var(--text-gray); margin-bottom: 2rem;">Thanks for reaching out. We'll get back to
+                        you within 24 hours.</p>
+                    <button onclick="location.reload()" class="visit-btn"
+                        style="background:var(--mint-soft); color:var(--forest-premium);">Send Another</button>
                 </div>
             </div>
+        </div>
 
-            <div class="map-section">
-                <h2>Find Us in Coimbatore</h2>
-                <div class="map-container">
+        <!-- RIGHT: Info & Map Sticky Sidebar -->
+        <aside class="info-sidebar">
+            <div class="info-card">
+                <div class="map-wrapper">
+                    <!-- Google Map Embed -->
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125495.88764534424!2d76.95572944335938!3d11.016844399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af2f971cb5%3A0x2fc1c81e183ed282!2sCoimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1647000000000!5m2!1sen!2sin"
-                        width="100%"
-                        height="400"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy"
-                        title="Aerthys Location in Coimbatore">
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
                     </iframe>
+                    <div class="map-overlay">
+                        <span style="font-weight:600; font-size:0.9rem; color:var(--forest-premium)">📍 Rooftop Farm,
+                            Coimbatore</span>
+                        <a href="https://goo.gl/maps/xyz" target="_blank" style="color:var(--forest-premium);"><i
+                                data-lucide="external-link" width="16"></i></a>
+                    </div>
+                </div>
+
+                <div style="margin-top:2rem;">
+                    <div class="info-header">
+                        <i data-lucide="truck" width="24"></i> Delivery Zones
+                    </div>
+                    <div class="zones-list">
+                        <span class="zone-pill">RS Puram <i data-lucide="check" width="12"></i></span>
+                        <span class="zone-pill">Gandhipuram <i data-lucide="check" width="12"></i></span>
+                        <span class="zone-pill">Peelamedu <i data-lucide="check" width="12"></i></span>
+                        <span class="zone-pill">Saibaba Colony <i data-lucide="check" width="12"></i></span>
+                    </div>
+                    <p style="font-size:0.85rem; color:var(--text-gray); margin-top:0.8rem;">
+                        Not listed? <a href="#"
+                            onclick="document.getElementById('message').value='Checking delivery for [Area Name]'; document.querySelector('.form-textarea').focus(); return false;"
+                            style="color:var(--forest-premium); text-decoration:underline;">Ask us!</a>
+                    </p>
                 </div>
             </div>
+
+            <div class="info-card">
+                <div class="info-header">
+                    <i data-lucide="users" width="24"></i> Contact Info
+                </div>
+                <div class="contact-list">
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i data-lucide="mail" width="18"></i></div>
+                        <div>
+                            <div style="font-weight:600; color:var(--text-dark)">Email Us</div>
+                            <a href="mailto:info.aerthys@gmail.com"
+                                style="color:var(--text-gray); font-size:0.95rem; text-decoration:none;">info.aerthys@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i data-lucide="phone" width="18"></i></div>
+                        <div>
+                            <div style="font-weight:600; color:var(--text-dark)">Call / WhatsApp</div>
+                            <a href="tel:+919791647818"
+                                style="color:var(--text-gray); font-size:0.95rem; text-decoration:none;">+91 97916
+                                47818</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i data-lucide="clock" width="18"></i></div>
+                        <div>
+                            <div style="font-weight:600; color:var(--text-dark)">Hours</div>
+                            <div style="color:var(--text-gray); font-size:0.95rem;">Mon-Sat: 7 AM - 7 PM</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-icon" title="Instagram"><i data-lucide="instagram" width="20"></i></a>
+                    <a href="https://wa.me/919791647818" class="social-icon" title="WhatsApp"><i
+                            data-lucide="message-circle" width="20"></i></a>
+                    <a href="#" class="social-icon" title="Facebook"><i data-lucide="facebook" width="20"></i></a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Farm Visit CTA -->
+    <section class="farm-visit-section">
+        <img src="assets/hero-bg.jpg" class="farm-bg" alt="Rooftop Farm">
+        <div class="farm-overlay"></div>
+        <div class="farm-content">
+            <h2 style="font-family:var(--font-serif); font-size:2.5rem; margin-bottom:1rem;">See Where the Magic Happens
+            </h2>
+            <p style="font-size:1.1rem; opacity:0.9; max-width:600px; margin:0 auto;">
+                Experience urban farming firsthand. Book a guided tour of our rooftop facility in Coimbatore.
+            </p>
+            <div class="farm-features">
+                <div><i data-lucide="user-check"></i> Guided Tour</div>
+                <div><i data-lucide="camera"></i> Photo Ops</div>
+                <div><i data-lucide="gift"></i> Free Samples</div>
+            </div>
+            <button class="visit-btn"
+                onclick="document.getElementById('order-type').value='inquiry'; document.getElementById('message').value='I would like to book a farm tour.'; document.querySelector('.form-card').scrollIntoView({behavior:'smooth'});">
+                Schedule Farm Tour <i data-lucide="calendar" width="20"></i>
+            </button>
         </div>
     </section>
 
-    <section class="faq-section">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>What is your minimum order quantity?</h3>
-                    <p>We work with businesses of all sizes. Contact us to discuss your specific needs and we'll create a custom solution.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How quickly can you deliver?</h3>
-                    <p>We harvest and deliver on the same day within Coimbatore. Orders are typically delivered within hours of harvest.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Do you offer recurring deliveries?</h3>
-                    <p>Yes! We offer flexible subscription plans for regular deliveries to ensure your kitchen always has fresh microgreens on hand.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Can you grow custom varieties?</h3>
-                    <p>Absolutely. We're happy to discuss growing specific varieties to meet your culinary needs. Lead time may vary based on the variety.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>Aerthys</h4>
-                    <p>Sustainably grown microgreens from Coimbatore's rooftop farms.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="why-microgreens.html">Why Microgreens</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>More</h4>
-                    <ul>
-                        <li><a href="about-microgreens.html">About Microgreens</a></li>
-                        <li><a href="team.html">Team</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <p>Email: info.aerthys@gmail.com</p>
-                    <p>Phone: +91 97916 47818</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Aerthys. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-<script>
-        lucide.createIcons();
+    <!-- Simple Mobile Nav Script -->
+    <script>
+        document.querySelector('.mobile-toggle')?.addEventListener('click', () => {
+            const menu = document.querySelector('.nav-menu-fresh');
+            menu.classList.toggle('active');
+            if (menu.classList.contains('active')) {
+                menu.style.display = 'flex';
+                menu.style.position = 'absolute';
+                menu.style.top = '80px';
+                menu.style.left = '0';
+                menu.style.right = '0';
+                menu.style.background = 'white';
+                menu.style.padding = '2rem';
+                menu.style.flexDirection = 'column';
+                menu.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
+            } else {
+                menu.style.display = 'none';
+            }
+        });
     </script>
+
+    <script src="contact-premium.js"></script>
 </body>
+
 </html>

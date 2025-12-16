@@ -1,55 +1,37 @@
 // ===========================
 // Mobile Navigation Toggle
 // ===========================
-document.addEventListener('DOMContentLoaded', function() {
-    const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('.nav-menu');
+document.addEventListener('DOMContentLoaded', function () {
+    const navToggle = document.querySelector('.mobile-toggle'); // Consistent class name
+    const navMenu = document.querySelector('.nav-menu-fresh');
 
     if (navToggle) {
-        navToggle.addEventListener('click', function() {
+        navToggle.addEventListener('click', function () {
+            // Toggle classes on both menu and button
             navMenu.classList.toggle('active');
-
-            // Animate hamburger icon
-            const spans = navToggle.querySelectorAll('span');
-            if (navMenu.classList.contains('active')) {
-                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-                spans[1].style.opacity = '0';
-                spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
-            } else {
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
-            }
+            navToggle.classList.toggle('active');
         });
     }
 
     // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
+    document.addEventListener('click', function (event) {
         if (navMenu && navToggle) {
             const isClickInsideNav = navMenu.contains(event.target) || navToggle.contains(event.target);
 
             if (!isClickInsideNav && navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
-                const spans = navToggle.querySelectorAll('span');
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
+                navToggle.classList.remove('active'); // Sync button state
             }
         }
     });
 
     // Close mobile menu when nav link is clicked
-    const navLinks = document.querySelectorAll('.nav-menu a');
+    const navLinks = document.querySelectorAll('.nav-menu-fresh a, .nav-menu a');
     navLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function () {
             if (navMenu && navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
-                if (navToggle) {
-                    const spans = navToggle.querySelectorAll('span');
-                    spans[0].style.transform = 'none';
-                    spans[1].style.opacity = '1';
-                    spans[2].style.transform = 'none';
-                }
+                if (navToggle) navToggle.classList.remove('active');
             }
         });
     });
@@ -61,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
 const contactForm = document.getElementById('contact-form');
 
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
 
         // Get form data
@@ -146,7 +128,7 @@ const observerOptions = {
     rootMargin: '0px 0px -50px 0px'
 };
 
-const observer = new IntersectionObserver(function(entries) {
+const observer = new IntersectionObserver(function (entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
@@ -156,7 +138,7 @@ const observer = new IntersectionObserver(function(entries) {
 }, observerOptions);
 
 // Add animation to cards and sections on scroll
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const animatedElements = document.querySelectorAll('.feature-card, .product-card, .benefit-item, .use-case-card, .team-member, .sustainability-card, .variety-card, .process-step, .founder-journey-section, .sustainability-new-section, .timeline-section, .about-cta-section, .sustainability-new-card, .timeline-step, .products-hero, .products-grid-section, .delivery-info, .delivery-model-conversion, .final-cta-gradient, .why-microgreens-hero, .aerthys-difference-section, .exclusive-badges-section, .key-benefits-section, .premium-stat-card, .exclusive-badge, .benefit-premium-card, .stat-item, .badge-item, .benefit-item, .gallery-item');
 
     animatedElements.forEach(el => {
@@ -168,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Trust Cards Fade-in Animation on Scroll
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const trustCards = document.querySelectorAll('.trust-card-new');
 
     const trustCardObserver = new IntersectionObserver((entries) => {
@@ -190,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // ===========================
 // Add active class to current page in nav
 // ===========================
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('.nav-menu a');
 
@@ -205,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // ===========================
 // Navbar Scroll Effect
 // ===========================
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
         navbar.classList.add('scrolled');

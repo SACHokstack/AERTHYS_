@@ -1,0 +1,643 @@
+/*
+===================================================
+AERTHYS LUXURY - FROM ROOFTOP TO TABLE
+Design: Immersive, Editorial, Farm-to-Table
+Palette: Deep Forest, Warm Cream, Sunrise Gold
+===================================================
+*/
+
+:root {
+    /* Light Luxury Palette */
+    --forest-deep: #1a3a2e;
+    /* Text / Primary Accents */
+    --forest-light: #2d5940;
+    /* Secondary Accents */
+    --cream-warm: #fdfcf8;
+    /* Main Background - Lighter for freshness */
+    --sand-beige: #f0ebe5;
+    /* Secondary Backgrounds */
+    --gold-sunrise: #b89c30;
+    /* Slightly darker gold for contrast on light */
+    --earth-brown: #3e3a35;
+    /* Body Text */
+
+    /* Typography */
+    --font-display: 'Crimson Pro', serif;
+    --font-body: 'DM Sans', sans-serif;
+
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 8rem;
+
+    /* Transitions */
+    --ease-editorial: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Base Setup */
+html.luxury-mode {
+    scroll-behavior: smooth;
+    background-color: var(--cream-warm);
+    /* Light BG */
+    color: var(--forest-deep);
+    /* Dark Text */
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Typography Overrides */
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    /* Editorial look is often lighter */
+    margin: 0;
+    line-height: 1.1;
+}
+
+p {
+    line-height: 1.6;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Utility Classes */
+.container-lux {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+.text-gold {
+    color: var(--gold-sunrise);
+}
+
+.text-cream {
+    color: var(--cream-warm);
+}
+
+.bg-cream {
+    background-color: var(--cream-warm);
+    color: var(--forest-deep);
+}
+
+.bg-forest {
+    background-color: var(--forest-deep);
+    color: var(--cream-warm);
+}
+
+/* Buttons */
+.btn-lux {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2.5rem;
+    border: 1px solid var(--forest-deep);
+    color: var(--forest-deep);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    transition: all 0.5s var(--ease-editorial);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-lux::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--forest-deep);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s var(--ease-editorial);
+    z-index: -1;
+}
+
+.btn-lux:hover {
+    color: var(--cream-warm);
+    border-color: var(--forest-deep);
+}
+
+.btn-lux:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.btn-lux-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--gold-sunrise);
+    text-decoration: none;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.2rem;
+    transition: gap 0.3s ease;
+}
+
+.btn-lux-text:hover {
+    gap: 1rem;
+}
+
+/* ===== NAVIGATION (Transparent) ===== */
+.nav-lux {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: var(--space-md) var(--space-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: background 0.5s ease, padding 0.5s ease;
+    color: var(--forest-deep);
+    /* Default dark text */
+}
+
+/* Override for Hero (Dark BG requires Light Text) */
+.nav-lux.on-hero {
+    color: var(--cream-warm);
+}
+
+.nav-lux.scrolled {
+    background: rgba(253, 252, 248, 0.95);
+    /* Light blurred BG */
+    backdrop-filter: blur(10px);
+    padding: 1rem var(--space-lg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    color: var(--forest-deep);
+    /* Ensure dark text on light nav */
+}
+
+.brand-lux {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: inherit;
+    /* Inherit form nav */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.menu-lux {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.link-lux {
+    color: inherit;
+    /* Inherit form nav */
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.link-lux:hover {
+    opacity: 1;
+}
+
+.link-lux::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: currentColor;
+    /* Matches text color (white or dark) */
+    transition: width 0.3s ease;
+}
+
+.link-lux:hover::after {
+    width: 100%;
+}
+
+/* Mobile Menu Button */
+.menu-toggle-lux {
+    display: none;
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+/* ===== HERO SECTION ===== */
+.hero-lux {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    transform: scale(1.1);
+    /* Initial scale for parallax effect */
+    transition: transform 0.1s linear;
+    /* Smooth parallax */
+}
+
+/* Gradient Overlay */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            rgba(26, 58, 46, 0.3),
+            rgba(26, 58, 46, 0.7));
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    margin-top: 10vh;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 8vw, 7rem);
+    line-height: 1;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1.2s var(--ease-editorial) forwards 0.5s;
+}
+
+.hero-title span {
+    display: inline-block;
+}
+
+.text-italic {
+    font-style: italic;
+    font-weight: 300;
+    border-bottom: 2px solid var(--gold-sunrise);
+    /* Animated underline effect could replace this */
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 3rem;
+    color: white;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1.2s var(--ease-editorial) forwards 0.8s;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1.2s var(--ease-editorial) forwards 1.1s;
+}
+
+/* Override button colors for hero visibility */
+.hero-lux .btn-lux {
+    border-color: white;
+    color: white;
+}
+
+.hero-lux .btn-lux::after {
+    background: white;
+}
+
+.hero-lux .btn-lux:hover {
+    color: var(--forest-deep);
+}
+
+/* Scroll Indication */
+.scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    animation: bounce 2s infinite;
+}
+
+/* ===== STATS (Redesigned) ===== */
+.stats-lux {
+    padding: var(--space-xl) 0;
+    background: var(--sand-beige);
+    /* Light Beige BG */
+    position: relative;
+    overflow: hidden;
+    color: var(--forest-deep);
+}
+
+.stats-grid-lux {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--space-lg);
+    align-items: center;
+}
+
+.stats-intro h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.stats-list {
+    display: grid;
+    gap: 4rem;
+}
+
+.stat-item {
+    padding-left: 2rem;
+    border-left: 1px solid rgba(26, 58, 46, 0.2);
+    position: relative;
+}
+
+.stat-value {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    color: var(--gold-sunrise);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    opacity: 0.8;
+}
+
+.stat-desc {
+    font-size: 0.95rem;
+    max-width: 300px;
+    opacity: 0.6;
+}
+
+/* ===== ROOFTOP STORY ===== */
+.story-lux {
+    background: var(--cream-warm);
+    color: var(--forest-deep);
+    padding: var(--space-xl) 0;
+}
+
+.story-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+}
+
+.story-img-wrapper {
+    position: relative;
+    height: 700px;
+}
+
+.story-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Parallax container usually handles this via JS or CSS 3D */
+}
+
+.story-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    color: var(--forest-deep);
+}
+
+.story-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--earth-brown);
+}
+
+/* ===== VARIETIES CAROUSEL ===== */
+.varieties-lux {
+    padding: var(--space-xl) 0;
+    background: var(--forest-deep);
+    /* Keep Dark for Contrast */
+    color: var(--cream-warm);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+.variety-scroller {
+    display: flex;
+    overflow-x: auto;
+    gap: var(--space-md);
+    padding: 0 var(--space-lg);
+    /* Padding for snap edges */
+    scrollbar-width: none;
+    /* Hide scrollbar Firefox */
+    -ms-overflow-style: none;
+}
+
+.variety-scroller::-webkit-scrollbar {
+    display: none;
+}
+
+.variety-card {
+    min-width: 350px;
+    position: relative;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.variety-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s var(--ease-editorial);
+}
+
+.variety-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.variety-card:hover .variety-img {
+    transform: scale(1.1);
+}
+
+.variety-card:hover .variety-info {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.variety-name {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--cream-warm);
+}
+
+/* ===== FOOTER LUX ===== */
+.footer-lux {
+    background: #0f221b;
+    color: var(--cream-warm);
+    /* Force light text */
+    padding: var(--space-xl) 0 var(--space-lg);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-brand p {
+    color: var(--cream-warm);
+    opacity: 0.7;
+    line-height: 1.6;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-lg);
+}
+
+.footer-brand h2 {
+    color: var(--cream-warm);
+    margin-bottom: 1rem;
+}
+
+.footer-links h4 {
+    color: var(--gold-sunrise);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: var(--cream-warm);
+    text-decoration: none;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
+
+/* Animations */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, 10px);
+    }
+}
+
+/* Mobile Responsive Overrides */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .stats-grid-lux {
+        grid-template-columns: 1fr;
+    }
+
+    .story-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .story-img-wrapper {
+        height: 400px;
+        order: -1;
+    }
+
+    .nav-lux {
+        padding: 1rem;
+    }
+
+    .menu-lux {
+        display: none;
+    }
+
+    /* Use mobile toggle logic from script */
+    .menu-toggle-lux {
+        display: block;
+    }
+
+    .variety-card {
+        min-width: 280px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}

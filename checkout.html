@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Checkout - Aerthys</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="homepage-fresh.css">
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="contact-premium.css"> <!-- Reusing form styles -->
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="checkout-flow">
+
+    <!-- Header -->
+    <header class="checkout-header">
+        <div class="header-inner">
+            <a href="index.html" class="nav-brand-fresh">
+                <img src="assets/Aerthys_logo.svg" alt="Aerthys" class="logo-fresh" style="height:40px;">
+            </a>
+
+            <div class="stepper-container">
+                <a href="cart.html" class="step-item completed" style="text-decoration:none;">
+                    <div class="step-circle"><i data-lucide="check" width="14"></i></div>
+                    <span>Cart</span>
+                </a>
+                <div class="step-line"></div>
+                <div class="step-item active">
+                    <div class="step-circle">2</div>
+                    <span>Checkout</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-item">
+                    <div class="step-circle">3</div>
+                    <span>Done</span>
+                </div>
+            </div>
+
+            <div class="secure-badge">
+                <i data-lucide="lock" width="14"></i> 100% Secure
+            </div>
+        </div>
+    </header>
+
+    <div class="container-checkout">
+        <h1 style="font-family:var(--font-serif); margin-bottom:0.5rem; color:var(--forest-premium);">Complete Your
+            Order</h1>
+        <p style="color:var(--text-gray); margin-bottom:2rem;">Secure checkout • Free delivery on orders above ₹500</p>
+
+        <form id="checkout-form" onsubmit="event.preventDefault(); placeOrder();" class="checkout-grid">
+
+            <!-- LEFT: Forms -->
+            <div class="checkout-form-section">
+
+                <!-- 1. Delivery Details -->
+                <div class="form-card-checkout">
+                    <div class="form-card-header">
+                        <i data-lucide="map-pin" width="24"></i> Delivery Details
+                    </div>
+
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1.5rem; margin-bottom:1.5rem;">
+                        <div class="form-group">
+                            <label
+                                style="font-size:0.9rem; font-weight:600; color:#444; margin-bottom:0.5rem; display:block;">Full
+                                Name</label>
+                            <input type="text" id="name" class="form-input checkout-input" placeholder="Your Name"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label
+                                style="font-size:0.9rem; font-weight:600; color:#444; margin-bottom:0.5rem; display:block;">Phone</label>
+                            <input type="tel" id="phone" class="form-input checkout-input" placeholder="+91 9XXXX XXXXX"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="margin-bottom:1.5rem;">
+                        <label
+                            style="font-size:0.9rem; font-weight:600; color:#444; margin-bottom:0.5rem; display:block;">Delivery
+                            Address</label>
+                        <textarea id="address" class="form-textarea checkout-input" rows="3"
+                            placeholder="Flat No, Building, Street, Area..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label
+                            style="font-size:0.9rem; font-weight:600; color:#444; margin-bottom:0.5rem; display:block;">Delivery
+                            Slot</label>
+                        <select class="form-input checkout-input" id="delivery-slot">
+                            <option>Tomorrow Morning (8 AM - 12 PM)</option>
+                            <option>Tomorrow Afternoon (12 PM - 4 PM)</option>
+                            <option>Tomorrow Evening (4 PM - 7 PM)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- 2. Payment Method -->
+                <div class="form-card-checkout">
+                    <div class="form-card-header">
+                        <i data-lucide="credit-card" width="24"></i> Payment Method
+                    </div>
+
+                    <div class="payment-options">
+                        <div class="payment-radio-label selected" data-value="cod">
+                            <div class="radio-circle"></div>
+                            <div style="flex:1;">
+                                <div style="font-weight:600; color:var(--forest-premium);">Cash on Delivery</div>
+                                <div style="font-size:0.85rem; color:#666;">Pay cash or UPI upon delivery</div>
+                            </div>
+                            <i data-lucide="banknote" style="color:var(--success-green);"></i>
+                        </div>
+
+                        <div class="payment-radio-label" data-value="upi">
+                            <div class="radio-circle"></div>
+                            <div style="flex:1;">
+                                <div style="font-weight:600; color:var(--forest-premium);">Pay via UPI</div>
+                                <div style="font-size:0.85rem; color:#666;">Google Pay, PhonePe, Paytm</div>
+                            </div>
+                            <i data-lucide="smartphone"></i>
+                        </div>
+
+                        <div class="payment-radio-label disabled" style="opacity:0.6; cursor:not-allowed;">
+                            <div class="radio-circle"></div>
+                            <div style="flex:1;">
+                                <div style="font-weight:600; color:#888;">Credit / Debit Card</div>
+                            </div>
+                            <span class="badge-coming-soon">Coming Soon</span>
+                        </div>
+                    </div>
+
+                    <!-- UPI Details (Hidden default) -->
+                    <div id="upi-section"
+                        style="display:none; margin-top:1.5rem; background:#f9f9f9; padding:1.5rem; border-radius:12px; text-align:center;">
+                        <p style="font-weight:600; margin-bottom:0.5rem;">Scan & Pay</p>
+                        <div
+                            style="width:150px; height:150px; background:#ddd; margin:0 auto 1rem; display:flex; align-items:center; justify-content:center; color:#666;">
+                            [QR Code]
+                        </div>
+                        <p style="font-size:0.9rem;">aerthys@upi</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: Summary Sidebar -->
+            <aside class="order-summary" style="height:fit-content; position:sticky; top:100px;">
+                <h3 style="margin-bottom:1.5rem; font-family:var(--font-serif);">Order Review</h3>
+
+                <div style="margin-bottom:1rem; padding-bottom:1rem; border-bottom:1px solid #eee;">
+                    <span id="items-count-display" style="font-weight:600; color:var(--forest-premium);">0 items</span>
+                    <a href="cart.html" style="font-size:0.85rem; float:right; color:var(--text-gray);">Edit</a>
+                </div>
+
+                <div class="summary-total" style="margin-top:0; border:none; padding:0;">
+                    <span>Total Amount</span>
+                    <span id="checkout-total-display">₹0</span>
+                </div>
+
+                <button type="submit" id="place-order-btn" class="checkout-btn-main">
+                    Place Order
+                </button>
+
+                <p style="font-size:0.8rem; color:#999; text-align:center; margin-top:1rem;">
+                    By placing order, you agree to our Terms & Privacy Policy.
+                </p>
+            </aside>
+        </form>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay">
+        <div class="modal-content">
+            <div class="success-icon-lg">
+                <i data-lucide="check" width="40"></i>
+            </div>
+            <h2
+                style="font-family:var(--font-serif); font-size:2rem; color:var(--forest-premium); margin-bottom:0.5rem;">
+                Order Confirmed!</h2>
+            <p style="color:var(--text-gray);">Thank you! Your greens are on their way.</p>
+
+            <div class="timeline">
+                <div class="timeline-item active">
+                    <div class="timeline-dot"><i data-lucide="check" width="16"></i></div>
+                    Order Placed
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    Harvesting
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    Delivered
+                </div>
+            </div>
+
+            <a href="index.html" class="checkout-btn-main" style="text-decoration:none;">
+                Back to Home
+            </a>
+            <p style="margin-top:1rem; font-size:0.9rem; color:#999;">Redirecting in 10s...</p>
+        </div>
+    </div>
+
+    <script src="checkout-logic.js"></script>
+</body>
+
+</html>

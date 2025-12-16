@@ -1,220 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore Aerthys's range of fresh, pesticide-free microgreens including Sunflower, Broccoli, Radish, and more. Delivered fresh daily in Coimbatore.">
-    <title>Our Products - Aerthys Microgreens</title>
+    <meta name="description"
+        content="Shop Aerthys Premium Microgreens. Fresh, pesticide-free, and nutrient-dense. Delivered daily in Coimbatore.">
+    <title>Shop Premium Microgreens - Aerthys</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="homepage-luxury.css" /> <!-- Base layout/nav -->
+    <link rel="stylesheet" href="products-premium.css" /> <!-- Premium Shop Styles -->
+
+    <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="products-page">
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="nav-brand">
-                <img src="assets/Aerthys_logo.jpeg" alt="Aerthys" class="logo">
-            </a>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="products.html" class="active">Products</a></li>
-                <li><a href="why-microgreens.html">Why Microgreens</a></li>
-                <li><a href="about-microgreens.html">About Microgreens</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+
+<body class="luxury-mode" style="padding-top:80px;"> <!-- Padding for fixed nav -->
+
+    <!-- Transparent Navigation (From Luxury Homepage) -->
+    <nav class="nav-lux scrolled"> <!-- Force 'scrolled' state for visibility on white background -->
+        <a href="index.html" class="brand-lux">
+            <i data-lucide="leaf" width="24" class="text-gold"></i>
+            Aerthys
+        </a>
+
+        <ul class="menu-lux">
+            <li><a href="index.html" class="link-lux">Home</a></li>
+            <li><a href="products.html" class="link-lux active" style="opacity:1;">Shop</a></li>
+            <li><a href="about.html" class="link-lux">Our Story</a></li>
+            <li><a href="why-microgreens.html" class="link-lux">Process</a></li>
+            <li><a href="contact.html" class="link-lux">Visit</a></li>
+        </ul>
+
+        <div style="display:flex; gap:1.5rem; align-items:center;">
+            <!-- Cart button reusing existing logic if possible, or new lux link -->
+            <a href="cart.html" class="link-lux"><i data-lucide="shopping-bag" width="20"></i></a>
+            <button class="menu-toggle-lux"><i data-lucide="menu" width="24"></i></button>
         </div>
     </nav>
 
-    <!-- Hero Section - Emotional Hook -->
-    <section class="products-hero">
-        <div class="container">
-            <h1 class="products-hero-title">Our Microgreens</h1>
-            <p class="products-hero-description">
-                Fresh, nutrient-dense varieties grown for flavor and wellness. Harvested at dawn. Delivered in hours.
-            </p>
-            <div class="products-hero-image">
-                <img src="assets/hero-bg.jpg" alt="Rooftop harvest" loading="lazy">
-            </div>
-        </div>
-    </section>
+    <!-- Main Shop Container -->
+    <div class="shop-container">
 
-    <!-- Products Grid Section -->
-    <section class="products-grid-section">
-        <div class="container">
-            <div class="products-intro">
-                <p>At Aerthys, we cultivate a diverse range of microgreens tailored to meet the needs of Coimbatore's restaurants, hotels, and wellness businesses. Each variety is carefully selected for its nutritional profile, flavor, and versatility in culinary applications.</p>
-                <p><strong>All our products are:</strong> Pesticide-free • Harvested fresh daily • Locally grown • Delivered within hours</p>
-            </div>
-
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="assets/sunflower-microgreens.jpg" alt="Sunflower Microgreens" class="product-image">
-                    <div class="product-content">
-                        <h3 class="product-title">Sunflower Microgreens</h3>
-                        <p class="product-desc">Crunchy, nutty greens with a mild, pleasant flavor that works beautifully in salads, sandwiches, and as a garnish.</p>
-                        <ul class="benefits">
-                            <li>Rich in plant protein and healthy fats</li>
-                            <li>High in Vitamin E and zinc</li>
-                            <li>Supports gut health with dietary fiber</li>
-                            <li>Crunchy texture adds depth to any dish</li>
-                        </ul>
-                        <button class="request-quote">Request Quote →</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <img src="assets/broccoli-microgreens.jpg" alt="Broccoli Microgreens" class="product-image">
-                    <div class="product-content">
-                        <h3 class="product-title">Broccoli Microgreens</h3>
-                        <p class="product-desc">Mild, earthy greens packed with one of nature's most powerful antioxidants.</p>
-                        <ul class="benefits">
-                            <li>Extremely high in sulforaphane, a potent anti-cancer compound</li>
-                            <li>Rich in vitamins A, C, and K</li>
-                            <li>Supports detoxification and immune function</li>
-                            <li>Subtle flavor works in smoothies and salads</li>
-                        </ul>
-                        <button class="request-quote">Request Quote →</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <img src="assets/radish-microgreens.jpg" alt="Radish Microgreens" class="product-image">
-                    <div class="product-content">
-                        <h3 class="product-title">Radish Microgreens</h3>
-                        <p class="product-desc">Spicy, peppery greens that add a bold kick to any plate.</p>
-                        <ul class="benefits">
-                            <li>Packed with vitamins A, C, and minerals</li>
-                            <li>Natural digestive aid</li>
-                            <li>Adds vibrant color and crunch</li>
-                            <li>Popular in Asian cuisine and fusion dishes</li>
-                        </ul>
-                        <button class="request-quote">Request Quote →</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <img src="assets/wheatgrass.jpg" alt="Wheatgrass" class="product-image">
-                    <div class="product-content">
-                        <h3 class="product-title">Wheatgrass</h3>
-                        <p class="product-desc">The classic superfood green, perfect for juicing and wellness shots.</p>
-                        <ul class="benefits">
-                            <li>Rich in chlorophyll and antioxidants</li>
-                            <li>Alkalizing and detoxifying</li>
-                            <li>High in vitamins A, C, and E</li>
-                            <li>Popular in juice bars and wellness centers</li>
-                        </ul>
-                        <button class="request-quote">Request Quote →</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <img src="assets/basil-microgreens.jpg" alt="Basil Microgreens" class="product-image">
-                    <div class="product-content">
-                        <h3 class="product-title">Basil Microgreens</h3>
-                        <p class="product-desc">Aromatic, flavorful greens with the classic basil taste in a delicate form.</p>
-                        <ul class="benefits">
-                            <li>Intense basil flavor and aroma</li>
-                            <li>Rich in antioxidants and essential oils</li>
-                            <li>Perfect for Italian and Mediterranean dishes</li>
-                            <li>Beautiful as a garnish</li>
-                        </ul>
-                        <button class="request-quote">Request Quote →</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <img src="assets/pea-shoots.jpg" alt="Pea Shoots" class="product-image">
-                    <div class="product-content">
-                        <h3 class="product-title">Pea Shoots</h3>
-                        <p class="product-desc">Sweet, tender shoots with a fresh pea flavor and crisp texture.</p>
-                        <ul class="benefits">
-                            <li>High in vitamins A, C, and folate</li>
-                            <li>Naturally sweet taste</li>
-                            <li>Tender texture ideal for salads and stir-fries</li>
-                            <li>Supports heart and eye health</li>
-                        </ul>
-                        <button class="request-quote">Request Quote →</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Delivery Model – Conversion Closer -->
-            <section class="delivery-model-conversion">
-                <h2>Our Delivery Model</h2>
-                <p>
-                    At Aerthys, freshness is paramount. We harvest your microgreens to order and deliver them to your door or kitchen within hours. Our hyper-local model ensures you receive produce at peak nutrition and flavor.
+        <!-- Left Column: Filters & Products -->
+        <main class="shop-main">
+            <!-- Header -->
+            <header class="shop-header" style="margin-bottom: 4rem; text-align:center;">
+                <h1
+                    style="font-family: var(--font-display); font-size: 3.5rem; color: var(--forest-deep); margin-bottom: 1rem;">
+                    The Collection
+                </h1>
+                <p style="color: var(--earth-brown); font-size: 1.2rem; max-width:600px; margin:0 auto;">
+                    Precision-grown microgreens, harvested daily at dawn.
                 </p>
-                <div class="delivery-features-highlight">
-                    <div>✓ Same-Day Harvest & Delivery</div>
-                    <div>✓ Custom Orders</div>
-                    <div>✓ Eco-Friendly Packaging</div>
-                    <div>✓ Consistent Supply</div>
-                </div>
-                <p class="delivery-note">
-                    Our product selection varies based on local demand and seasonal preferences. Contact us to discuss your specific requirements.
-                </p>
-            </section>
-        </div>
-    </section>
+            </header>
 
-    <!-- Final CTA – Green Gradient Closer -->
-    <section class="final-cta-gradient">
-        <h2>Ready to Order?</h2>
-        <p>
-            Elevate your menu with the freshest, most sustainable microgreens in Coimbatore.
-        </p>
-        <a href="contact.html" class="cta-button-gradient">Get in Touch →</a>
-    </section>
+            <!-- Sticky Filter Bar -->
+            <div class="filter-bar">
+                <button class="filter-pill active" data-filter="all">
+                    <i data-lucide="layout-grid" width="16"></i> All Products
+                </button>
+                <button class="filter-pill" data-filter="mild">
+                    <i data-lucide="smile" width="16"></i> Mild Flavor
+                </button>
+                <button class="filter-pill" data-filter="spicy">
+                    <i data-lucide="flame" width="16"></i> Spicy Kick
+                </button>
+                <button class="filter-pill" data-filter="salad">
+                    <i data-lucide="utensils" width="16"></i> Best for Salads
+                </button>
+                <button class="filter-pill" data-filter="Vitamin E Rich">
+                    <i data-lucide="heart" width="16"></i> Vitamin Rich
+                </button>
+            </div>
 
-    <!-- Footer - Light & Clean -->
-    <footer class="footer-light">
-        <div class="container">
-            <div class="footer-light-grid">
-                <div class="footer-light-col">
-                    <h4>Aerthys</h4>
-                    <p>Sustainably grown microgreens from Coimbatore's rooftop farms.</p>
-                </div>
-                <div class="footer-light-col">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="why-microgreens.html">Why Microgreens</a></li>
-                    </ul>
-                </div>
-                <div class="footer-light-col">
-                    <h4>More</h4>
-                    <ul>
-                        <li><a href="about-microgreens.html">About Microgreens</a></li>
-                        <li><a href="team.html">Team</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-light-col">
-                    <h4>Contact</h4>
-                    <p>Email: info.aerthys@gmail.com</p>
-                    <p>Phone: +91 97916 47818</p>
+            <!-- Product Grid -->
+            <div class="premium-grid">
+                <!-- Products injected via JS -->
+                <div class="product-card-premium"
+                    style="height: 400px; display: flex; align-items: center; justify-content: center;">
+                    <p style="color: var(--text-gray);">Loading fresh greens...</p>
                 </div>
             </div>
-            <div class="footer-light-bottom">
-                <p>&copy; 2025 Aerthys. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+        </main>
 
-    <script src="script.js"></script>
-<script>
-        lucide.createIcons();
+        <!-- Right Column: Cart Sidebar -->
+        <aside class="cart-sidebar">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <i data-lucide="shopping-bag" style="color: var(--forest-green);"></i>
+            </div>
+
+            <div class="cart-items-container">
+                <!-- Cart items injected via JS -->
+                <div class="empty-cart-state">
+                    <p>Loading cart...</p>
+                </div>
+            </div>
+
+            <div class="cart-footer">
+                <div class="price-summary-row">
+                    <span>Subtotal</span>
+                    <span>Calculated at checkout</span>
+                </div>
+                <div class="price-summary-row">
+                    <span>Delivery</span>
+                    <span class="delivery-fee-display">Free above ₹500</span>
+                </div>
+                <div class="price-summary-row price-summary-total">
+                    <span>Total</span>
+                    <span>₹0</span>
+                </div>
+                <button class="checkout-btn">
+                    Proceed to Checkout <i data-lucide="arrow-right" width="18"></i>
+                </button>
+
+                <div style="margin-top: 1rem; display: flex; justify-content: center; gap: 1rem; opacity: 0.7;">
+                    <i data-lucide="truck" width="16" title="Same Day Delivery"></i>
+                    <i data-lucide="leaf" width="16" title="Pesticide Free"></i>
+                    <i data-lucide="shield-check" width="16" title="Secure Payment"></i>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Mobile Floating Cart Button -->
+    <button class="fab-cart">
+        <i data-lucide="shopping-cart"></i>
+        <span class="fab-cart-count">0</span>
+    </button>
+
+    <!-- Simple Mobile Nav Script (can be moved to main JS if preferred) -->
+    <script>
+        const toggle = document.querySelector('.mobile-toggle');
+        const menu = document.querySelector('.nav-menu-fresh');
+        if (toggle && menu) {
+            toggle.addEventListener('click', () => {
+                menu.classList.toggle('active');
+                menu.style.display = menu.classList.contains('active') ? 'flex' : 'none';
+                if (menu.classList.contains('active')) {
+                    menu.style.position = 'absolute';
+                    menu.style.top = '80px';
+                    menu.style.left = '0';
+                    menu.style.right = '0';
+                    menu.style.background = 'white';
+                    menu.style.padding = '2rem';
+                    menu.style.flexDirection = 'column';
+                    menu.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
+                }
+            });
+        }
     </script>
+
+    <!-- Logic -->
+    <script src="script.js"></script> <!-- General Site Logic -->
+    <script src="product-data.js"></script> <!-- Shared Data -->
+    <script src="products-premium.js"></script> <!-- Page Logic -->
 </body>
+
 </html>

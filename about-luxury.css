@@ -1,0 +1,606 @@
+/*
+===================================================
+AERTHYS ABOUT - REFINED LUXURY
+Design: Minimalist, Architectural, High-End
+===================================================
+*/
+
+:root {
+    /* Inherit from homepage-luxury.css */
+    /* Refined local aliases */
+    --timeline-gold: var(--gold-sunrise);
+    --soft-surface: #f4f1ea;
+    --white-pure: #ffffff;
+    /* Defined locally to ensure visibility */
+    /* Very subtle warm grey/beige */
+}
+
+/* Base Overrides */
+.about-page {
+    background: var(--cream-warm);
+    color: var(--earth-brown);
+}
+
+/* ===== HERO SECTION ===== */
+.hero-about {
+    padding: 14rem 2rem 8rem;
+    background: var(--cream-warm);
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle background grain or gradient could go here */
+
+.hero-about::after {
+    content: '';
+    position: absolute;
+    right: -10%;
+    top: -10%;
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.03) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.hero-about-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.hero-about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    /* Reduced from 8rem for better safety */
+    align-items: center;
+    /* Center vertically */
+    justify-items: start;
+}
+
+.hero-about-left {
+    padding-top: 2rem;
+}
+
+.hero-about-title {
+    font-family: var(--font-display);
+    font-size: 5rem;
+    font-weight: 300;
+    color: var(--forest-deep);
+    margin-bottom: 3rem;
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.founder-quote-large {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-style: italic;
+    color: var(--forest-deep);
+    line-height: 1.4;
+    margin: 0 0 3rem 0;
+    position: relative;
+    padding-left: 0;
+    border: none;
+}
+
+.quote-attribution {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--gold-sunrise);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.hero-intro-text {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--earth-brown);
+    margin-top: 3rem;
+    max-width: 500px;
+}
+
+/* Founder Photo - Clean & Architectural */
+.founder-photo-card {
+    position: relative;
+    z-index: 1;
+}
+
+.founder-photo-main {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    filter: none;
+    display: block;
+    /* Let the high quality photography speak */
+}
+
+.founder-caption {
+    position: absolute;
+    bottom: -3rem;
+    /* Push further down */
+    left: 2rem;
+    /* Align left instead of right to avoid overflow */
+    right: auto;
+    background: var(--white-pure);
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    max-width: 250px;
+}
+
+.founder-caption h4 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--forest-deep);
+    margin-bottom: 0.5rem;
+}
+
+.founder-caption p {
+    font-family: var(--font-body);
+    color: var(--text-gray);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ===== JOURNEY SECTION (Clean Grid) ===== */
+.journey-section {
+    background: var(--white-pure);
+    padding: 10rem 2rem;
+}
+
+.journey-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    color: var(--forest-deep);
+    text-align: center;
+    margin-bottom: 6rem;
+    font-weight: 300;
+}
+
+.journey-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+}
+
+.journey-column {
+    background: transparent;
+    border: none;
+    padding: 0;
+    text-align: left;
+}
+
+.journey-column:hover {
+    background: transparent;
+    transform: none;
+    color: inherit;
+}
+
+.journey-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--soft-surface);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    color: var(--forest-deep);
+}
+
+.journey-icon i {
+    font-size: 1.2rem;
+    color: var(--forest-deep);
+}
+
+.journey-column h3 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--forest-deep);
+    margin-bottom: 1.5rem;
+}
+
+.journey-column p {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-gray);
+}
+
+/* ===== PROCESS TIMELINE (Strict Grid) ===== */
+.process-section {
+    background: var(--soft-surface);
+    padding: 10rem 2rem;
+}
+
+.process-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 100%;
+    background: rgba(26, 58, 46, 0.2);
+    top: 0;
+}
+
+.process-step {
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr;
+    /* Left, Badge, Right */
+    align-items: center;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.step-badge {
+    grid-column: 2;
+    width: 60px;
+    height: 60px;
+    background: var(--forest-deep);
+    color: var(--white-pure);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    /* Center in grid cell */
+    margin: 0 auto;
+}
+
+/* Left Step: Content in Col 1, Empty Col 3 */
+.step-left .step-content {
+    grid-column: 1;
+    text-align: right;
+    padding-right: 3rem;
+}
+
+/* Right Step: Content in Col 3, Empty Col 1 */
+.step-right .step-content {
+    grid-column: 3;
+    text-align: left;
+    padding-left: 3rem;
+}
+
+.step-content {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.step-period {
+    background: transparent;
+    color: var(--gold-sunrise);
+    padding: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.step-content h4 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-display);
+    color: var(--forest-deep);
+}
+
+.step-content p {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: var(--earth-brown);
+    line-height: 1.6;
+}
+
+/* ===== COMMITMENTS / CERTIFICATIONS ===== */
+.certifications-section {
+    background: var(--white-pure);
+    padding: 10rem 2rem;
+}
+
+.certifications-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.certifications-badges {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    text-align: center;
+    border-top: 1px solid rgba(26, 58, 46, 0.1);
+    padding-top: 4rem;
+}
+
+.certification-badge {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.certification-badge:hover {
+    transform: none;
+}
+
+.cert-circle {
+    /* Minimalist icon style */
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    border: 1px solid var(--forest-deep);
+    border-radius: 50%;
+    /* Keep circle for badges but thin */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.cert-circle i {
+    color: var(--forest-deep);
+    font-size: 1.5rem;
+}
+
+.certification-badge:hover .cert-circle {
+    background: var(--forest-deep);
+    border-color: var(--forest-deep);
+}
+
+.certification-badge:hover .cert-circle i {
+    color: var(--gold-sunrise);
+}
+
+.certification-badge h4 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--forest-deep);
+}
+
+/* ===== FARM STATS (Dark Mode Strip) ===== */
+.farm-section {
+    background: var(--forest-deep);
+    color: var(--white-pure);
+    padding: 8rem 2rem;
+}
+
+.farm-section .section-title,
+.farm-section .section-subtitle {
+    color: var(--white-pure);
+    text-align: left;
+}
+
+.farm-section .section-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 3rem;
+    margin-bottom: 4rem;
+}
+
+.farm-stats-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    margin-top: 0;
+}
+
+.farm-stat-card {
+    background: transparent;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    flex: 1;
+    /* Ensure equal width */
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    /* Add separators for structure */
+    padding-left: 2rem;
+}
+
+.farm-stat-card:first-child {
+    border-left: none;
+    padding-left: 0;
+}
+
+.farm-stat-card:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.farm-stat-card h4 {
+    font-size: 3rem;
+    /* Big numbers */
+    color: var(--gold-sunrise);
+    font-family: var(--font-display);
+    margin-bottom: 0.5rem;
+}
+
+.farm-stat-card p {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.7;
+}
+
+/* Photos Grid - Restored with Luxury Images */
+.farm-photos-grid {
+    display: grid;
+    /* Restored from none */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.farm-photo-img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    /* Square for Instagram/Editorial feel */
+    object-fit: cover;
+    margin-bottom: 1rem;
+    filter: sepia(10%) contrast(1.05);
+    /* Subtle warmth */
+    transition: transform 0.5s ease;
+}
+
+.farm-photo-card:hover .farm-photo-img {
+    transform: scale(1.02);
+}
+
+.farm-photo-card h4 {
+    color: var(--white-pure);
+    /* Ensure visibility */
+    text-align: left;
+    font-size: 1.1rem;
+    padding-left: 0.5rem;
+    border-left: 1px solid var(--gold-sunrise);
+}
+
+/* ===== NUMBERS SECTION (Light Mode Strip) ===== */
+.numbers-section {
+    background: var(--soft-surface);
+    padding: 8rem 2rem;
+}
+
+.numbers-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.numbers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    text-align: center;
+}
+
+.number-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.number-circle {
+    /* Remove circle background, go for minimal typography */
+    width: auto;
+    height: auto;
+    background: transparent;
+    box-shadow: none;
+    margin-bottom: 1rem;
+    border-radius: 0;
+}
+
+.number-circle:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.number-value {
+    font-family: var(--font-display);
+    font-size: 5rem;
+    color: var(--forest-deep);
+    line-height: 1;
+}
+
+.number-label {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--earth-brown);
+    font-weight: 500;
+}
+
+/* Focus on stats and text for luxury feel */
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .hero-about-content {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .hero-about-title {
+        font-size: 3.5rem;
+    }
+
+    .founder-caption {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin-top: -3rem;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    .journey-grid,
+    .certifications-badges {
+        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    /* Mobile Adjustments for Process */
+    .process-step {
+        grid-template-columns: 50px 1fr;
+        /* Badge, Content */
+        gap: 1rem;
+    }
+
+    .timeline-line {
+        left: 25px;
+        /* Center of badge column */
+        transform: none;
+    }
+
+    .step-badge {
+        grid-column: 1;
+        width: 50px;
+        height: 50px;
+        margin: 0;
+    }
+
+    .step-left .step-content,
+    .step-right .step-content {
+        grid-column: 2;
+        text-align: left;
+        padding-left: 1rem;
+        padding-right: 0;
+    }
+
+    .farm-photos-grid,
+    .farm-stats-cards {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .farm-stat-card {
+        border-left: none;
+        padding-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 2rem;
+    }
+
+    .farm-stat-card:first-child {
+        border-top: none;
+        padding-top: 0;
+    }
+}

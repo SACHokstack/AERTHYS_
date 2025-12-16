@@ -1,171 +1,332 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="luxury-mode">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about Aerthys's mission to grow sustainable, pesticide-free microgreens through urban rooftop farming.">
-    <title>About Aerthys - Our Story & Sustainability Mission</title>
+    <title>Our Story - Aerthys | Premium Urban Farming</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="homepage-luxury.css">
+    <link rel="stylesheet" href="about-luxury.css">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="about-page-new">
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="nav-brand">
-                <img src="assets/Aerthys_logo.jpeg" alt="Aerthys" class="logo">
-            </a>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="why-microgreens.html">Why Microgreens</a></li>
-                <li><a href="about-microgreens.html">About Microgreens</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+
+<body style="padding-top:80px;">
+
+    <!-- Transparent Navigation -->
+    <nav class="nav-lux scrolled">
+        <a href="index.html" class="brand-lux">
+            <i data-lucide="leaf" width="24" class="text-gold"></i>
+            Aerthys
+        </a>
+
+        <ul class="menu-lux">
+            <li><a href="index.html" class="link-lux">Home</a></li>
+            <li><a href="products.html" class="link-lux">Shop</a></li>
+            <li><a href="about.html" class="link-lux active" style="opacity:1;">Our Story</a></li>
+            <li><a href="why-microgreens.html" class="link-lux">Process</a></li>
+            <li><a href="contact.html" class="link-lux">Visit</a></li>
+        </ul>
+
+        <div style="display:flex; gap:1.5rem; align-items:center;">
+            <a href="cart.html" class="link-lux"><i data-lucide="shopping-bag" width="20"></i></a>
+            <button class="menu-toggle-lux"><i data-lucide="menu" width="24"></i></button>
         </div>
     </nav>
 
-    <!-- Founder's Journey - 2 Column Story -->
-    <section class="founder-journey-section">
-        <div class="container">
-            <div class="founder-journey-grid">
-                <div class="founder-journey-text">
-                    <h1>Our Founder's Journey</h1>
-                    <p>Aerthys was born from a deep connection to the land and a vision for sustainable agriculture. Our founder, <strong>Theivanth Rajamohan</strong>, spent his childhood at his grandmother's village farm, where he learned the rhythms of nature and the value of working with the earth.</p>
-                    <p>Years later, while studying at Singapore Management University, Theivanth participated in a sustainability program that rekindled his passion for agriculture. He recognized the urgent need for farming practices that nourish both people and the planet.</p>
-                    <blockquote class="founder-quote">
-                        "We're not just growing greens—we're cultivating a future where food is fresh, sustainable, and deeply connected to community."
+    <!-- Hero Section -->
+    <section class="hero-about">
+        <div class="hero-about-container">
+            <div class="hero-about-content">
+                <!-- Left Side: Quote and Text -->
+                <div class="hero-about-left" data-aos="fade-right" data-aos-delay="200">
+                    <h1 class="hero-about-title">Our Story</h1>
+
+                    <blockquote class="founder-quote-large">
+                        "We're not just growing microgreens—we're reimagining urban agriculture for Coimbatore."
                     </blockquote>
-                    <p>This realization led him to specialize in sustainable agriculture and ultimately to establish Aerthys — bringing ultra-fresh, nutrient-dense greens to local restaurants, hotels, and wellness businesses.</p>
-                </div>
-                <div class="founder-journey-image">
-                    <img src="assets/about-bg.jpg" alt="Aerthys Rooftop Farm" class="founder-journey-img">
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Sustainability Focus - 3 Cards on Mint Background -->
-    <section class="sustainability-new-section">
-        <div class="container">
-            <h2 class="sustainability-new-title">Our Sustainability Focus</h2>
-            <p class="sustainability-new-subtitle">Three pillars of eco-conscious farming</p>
-            <div class="sustainability-new-grid">
-                <div class="sustainability-new-card">
-                    <div class="sustainability-new-icon">💧</div>
-                    <h3>90% Less Water</h3>
-                    <p>Hydroponic rooftop trays use recirculating systems, making every drop count.</p>
-                </div>
-                <div class="sustainability-new-card">
-                    <div class="sustainability-new-icon">🚫</div>
-                    <h3>Zero Pesticides</h3>
-                    <p>Natural pest control with companion planting keeps our greens pure and safe.</p>
-                </div>
-                <div class="sustainability-new-card">
-                    <div class="sustainability-new-icon">🌱</div>
-                    <h3>Hyper-Local</h3>
-                    <p>Same-day harvest to plate in Coimbatore, minimizing carbon footprint.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+                    <p class="quote-attribution">— Theivanth Rajamohan, Founder</p>
 
-    <!-- Timeline - From Village to Rooftop -->
-    <section class="timeline-section">
-        <div class="container">
-            <h2 class="timeline-title">From Village to Rooftop</h2>
-            <p class="timeline-subtitle">A journey of passion, learning, and purpose</p>
-        </div>
-        <div class="timeline-horizontal-container">
-            <div class="timeline-track">
-                <div class="timeline-step">
-                    <div class="timeline-step-image">
-                        <img src="assets/chapter1.jpg" alt="Childhood on grandmother's farm">
-                    </div>
-                    <div class="timeline-step-content">
-                        <span class="timeline-step-label">Chapter 1</span>
-                        <h3>Roots in the Village</h3>
-                        <p>Childhood summers spent learning traditional farming at grandmother's village, where seeds of sustainability were planted.</p>
+                    <div class="hero-intro-text">
+                        <p>Founded with a vision to transform how Coimbatore thinks about fresh, sustainable food. We're
+                            bridging the gap between traditional farming wisdom and modern urban innovation, delivering
+                            the city's freshest microgreens straight from rooftop to your table.</p>
                     </div>
                 </div>
-                <div class="timeline-step">
-                    <div class="timeline-step-image">
-                        <img src="assets/chapter2.jpg" alt="Sustainability studies in Singapore">
-                    </div>
-                    <div class="timeline-step-content">
-                        <span class="timeline-step-label">Chapter 2</span>
-                        <h3>Education & Awakening</h3>
-                        <p>Singapore Management University's sustainability program reignited the passion for agriculture with a modern, eco-conscious lens.</p>
-                    </div>
-                </div>
-                <div class="timeline-step">
-                    <div class="timeline-step-image">
-                        <img src="assets/chapter3.jpg" alt="Aerthys rooftop farms today">
-                    </div>
-                    <div class="timeline-step-content">
-                        <span class="timeline-step-label">Chapter 3</span>
-                        <h3>Aerthys is Born</h3>
-                        <p>Urban rooftop farms in Coimbatore delivering same-day freshness — merging tradition with innovation for a sustainable future.</p>
+
+                <!-- Right Side: Founder Photo -->
+                <div class="hero-about-right" data-aos="fade-left" data-aos-delay="400">
+                    <div class="founder-photo-card">
+                        <img src="assets/theivanth.jpeg" alt="Theivanth Rajamohan" class="founder-photo-main">
+                        <div class="founder-caption">
+                            <h4>Theivanth Rajamohan</h4>
+                            <p>Founder & CEO</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section - Partner with Us -->
-    <section class="about-cta-section">
-        <div class="about-cta-content">
-            <h2>Ready to Elevate Your Menu?</h2>
-            <p>Partner with Aerthys for the freshest, most sustainable microgreens in Coimbatore.</p>
-            <a href="contact.html" class="btn btn-about-cta">Partner with Us</a>
+    <!-- The Journey Section -->
+    <section class="journey-section">
+        <div class="journey-container">
+            <div class="section-header" data-aos="fade-up" data-aos-delay="200">
+                <h2 class="section-title">From Village Roots to Urban Innovation</h2>
+            </div>
+
+            <div class="journey-grid" data-aos="fade-up" data-aos-delay="400">
+                <div class="journey-column">
+                    <div class="journey-icon">
+                        <i data-lucide="sprout"></i>
+                    </div>
+                    <h3>The Beginning</h3>
+                    <p>Growing up spending summers at his grandmother's traditional farm, Theivanth learned the timeless
+                        principles of working with nature rather than against it. These formative experiences planted
+                        the seeds of understanding.</p>
+                </div>
+
+                <div class="journey-column">
+                    <div class="journey-icon">
+                        <i data-lucide="lightbulb"></i>
+                    </div>
+                    <h3>The Vision</h3>
+                    <p>During his studies at Singapore Management University, a sustainability program reignited his
+                        agricultural passion. He realized the future of food production lay in revolutionizing how and
+                        where we grow our food.</p>
+                </div>
+
+                <div class="journey-column">
+                    <div class="journey-icon">
+                        <i data-lucide="target"></i>
+                    </div>
+                    <h3>The Mission</h3>
+                    <p>Today, Theivanth leads Aerthys with a mission to bring ultra-fresh, nutrient-dense microgreens
+                        directly from Coimbatore's rooftops to local restaurants, hotels, and conscious consumers.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Footer - Light & Clean -->
-    <footer class="footer-light">
-        <div class="container">
-            <div class="footer-light-grid">
-                <div class="footer-light-col">
-                    <h4>Aerthys</h4>
-                    <p>Premium microgreens grown sustainably.</p>
+    <!-- Our Farm Section -->
+    <section class="farm-section">
+        <div class="farm-container">
+            <div class="section-header" data-aos="fade-up" data-aos-delay="200">
+                <h2 class="section-title">Our Farm</h2>
+                <p class="section-subtitle">State-of-the-art hydroponic rooftop facilities across Coimbatore</p>
+            </div>
+
+            <!-- Farm Photos Grid -->
+            <div class="farm-photos-grid" data-aos="fade-up" data-aos-delay="400">
+                <div class="farm-photo-card">
+                    <img src="assets/rooftop_farm.png" alt="Rooftop Farm" class="farm-photo-img">
+                    <h4>Rooftop Setup</h4>
                 </div>
-                <div class="footer-light-col">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="why-microgreens.html">Why Microgreens</a></li>
-                    </ul>
+                <div class="farm-photo-card">
+                    <img src="assets/hydroponic_system.png" alt="Hydroponic System" class="farm-photo-img">
+                    <h4>Hydroponic Systems</h4>
                 </div>
-                <div class="footer-light-col">
-                    <h4>More</h4>
-                    <ul>
-                        <li><a href="about-microgreens.html">About Microgreens</a></li>
-                        <li><a href="team.html">Team</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-light-col">
-                    <h4>Contact</h4>
-                    <p>Email: info.aerthys@gmail.com</p>
-                    <p>Phone: +91 97916 47818</p>
+                <div class="farm-photo-card">
+                    <img src="assets/microgreen_harvest.png" alt="Harvest" class="farm-photo-img">
+                    <h4>Growing Microgreens</h4>
                 </div>
             </div>
-            <div class="footer-light-bottom">
-                <p>&copy; 2025 Aerthys. All rights reserved.</p>
+
+            <!-- Farm Stats -->
+            <div class="farm-stats-cards" data-aos="fade-up" data-aos-delay="600">
+                <div class="farm-stat-card">
+                    <h4>Location</h4>
+                    <p>Multiple rooftop locations across Coimbatore</p>
+                </div>
+                <div class="farm-stat-card">
+                    <h4>Setup</h4>
+                    <p>Advanced hydroponic systems with climate control</p>
+                </div>
+                <div class="farm-stat-card">
+                    <h4>Capacity</h4>
+                    <p>Producing 150+ kg of fresh microgreens weekly</p>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- By the Numbers Section -->
+    <section class="numbers-section">
+        <div class="numbers-container">
+            <div class="numbers-grid" data-aos="zoom-in" data-aos-delay="200">
+                <div class="number-badge">
+                    <div class="number-circle">
+                        <div class="number-value">5</div>
+                    </div>
+                    <div class="number-label">Rooftop Locations</div>
+                </div>
+                <div class="number-badge">
+                    <div class="number-circle">
+                        <div class="number-value">10K+</div>
+                    </div>
+                    <div class="number-label">Harvests</div>
+                </div>
+                <div class="number-badge">
+                    <div class="number-circle">
+                        <div class="number-value">50+</div>
+                    </div>
+                    <div class="number-label">Restaurant Partners</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process Section -->
+    <section class="process-section">
+        <div class="process-container">
+            <div class="section-header" data-aos="fade-up" data-aos-delay="200">
+                <h2 class="section-title">From Seed to Harvest</h2>
+            </div>
+
+            <div class="process-timeline" data-aos="fade-up" data-aos-delay="400">
+                <div class="timeline-line"></div>
+
+                <div class="process-step step-left">
+                    <div class="step-badge">
+                        <i data-lucide="seed"></i>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-period">Day 1-3</div>
+                        <h4>Seeding</h4>
+                        <p>Seeds are carefully selected and planted in controlled conditions with optimal spacing and
+                            sterile growing medium.</p>
+                    </div>
+                </div>
+
+                <div class="process-step step-right">
+                    <div class="step-badge">
+                        <i data-lucide="eye"></i>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-period">Day 4-7</div>
+                        <h4>Growth Monitoring</h4>
+                        <p>Daily monitoring of temperature, humidity, and nutrients to ensure optimal growing conditions
+                            and healthy development.</p>
+                    </div>
+                </div>
+
+                <div class="process-step step-left">
+                    <div class="step-badge">
+                        <i data-lucide="scissors"></i>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-period">Day 8-14</div>
+                        <h4>Harvest Window</h4>
+                        <p>Greens reach peak nutrition and flavor profile. Hand-harvested at dawn when nutrient density
+                            is at its highest.</p>
+                    </div>
+                </div>
+
+                <div class="process-step step-right">
+                    <div class="step-badge">
+                        <i data-lucide="truck"></i>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-period">Same Day</div>
+                        <h4>Delivery</h4>
+                        <p>Harvested at dawn, delivered by noon - maximum freshness guaranteed with no middlemen or
+                            storage delays.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications-section">
+        <div class="certifications-container">
+            <div class="section-header" data-aos="fade-up" data-aos-delay="200">
+                <h2 class="section-title">Our Commitments</h2>
+            </div>
+
+            <div class="certifications-badges" data-aos="fade-up" data-aos-delay="400">
+                <div class="certification-badge">
+                    <div class="cert-circle">
+                        <i data-lucide="leaf"></i>
+                    </div>
+                    <h4>Organic Farming Practices</h4>
+                </div>
+                <div class="certification-badge">
+                    <div class="cert-circle">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <h4>Food Safety Standards</h4>
+                </div>
+                <div class="certification-badge">
+                    <div class="cert-circle">
+                        <i data-lucide="recycle"></i>
+                    </div>
+                    <h4>Sustainable Operations</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-lux">
+        <div class="container-lux footer-grid">
+            <div class="footer-brand">
+                <h2>Aerthys</h2>
+                <p style="opacity:0.6; padding-right:2rem;">Premium rooftop-grown microgreens delivered fresh to your
+                    door. Redefining urban agriculture in Coimbatore.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="products.html?filter=mild">Mild Greens</a></li>
+                    <li><a href="products.html?filter=spicy">Spicy Greens</a></li>
+                    <li><a href="products.html?filter=mixes">Mixes</a></li>
+                    <li><a href="products.html">Subscriptions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Stay Connected</h4>
+                <p style="margin-bottom:1rem; opacity:0.6;">Join our newsletter for weekly harvest updates.</p>
+                <div style="display:flex;">
+                    <input type="email" placeholder="Email Address"
+                        style="background:transparent; border:1px solid rgba(255,255,255,0.2); padding:0.8rem; color:white; width:100%;">
+                    <button
+                        style="background:var(--gold-sunrise); border:none; padding:0 1.5rem; cursor:pointer; color:var(--forest-deep); font-weight:bold;">&rarr;</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-lux"
+            style="border-top:1px solid rgba(255,255,255,0.05); padding-top:2rem; text-align:center; font-size:0.8rem; opacity:0.4;">
+            &copy; 2024 Aerthys Urban Farms.
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Logic -->
+    <script src="homepage-luxury.js"></script>
 </body>
+
 </html>

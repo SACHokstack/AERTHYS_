@@ -1,0 +1,956 @@
+/*
+===================================================
+MICROGREENS EDUCATION PAGE - INFOGRAPHIC STYLE
+Design: Educational, engaging, and data-driven
+===================================================
+*/
+
+/* ===== IMPORT HOMEPAGE STYLES ===== */
+@import url('homepage-fresh.css');
+
+/* ===== VARIABLES ===== */
+:root {
+    /* Educational Color Palette */
+    --education-bg: #f8faf9;
+    --info-blue: #3b82f6;
+    --success-green: #10b981;
+    --warning-orange: #f59e0b;
+    --nutrition-red: #ef4444;
+    --data-purple: #8b5cf6;
+
+    /* Existing Variables */
+    --forest-green: #1a3d2e;
+    --lime-accent: #c7ea46;
+    --sage-green: #6b8e7f;
+    --cream: #faf8f3;
+    --white: #ffffff;
+    --charcoal: #2c2c2c;
+
+    /* Typography */
+    --font-serif: 'Crimson Pro', Georgia, serif;
+    --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+
+    /* Shadows & Effects */
+    --shadow-soft: 0 4px 20px rgba(26, 61, 46, 0.08);
+    --shadow-medium: 0 8px 30px rgba(26, 61, 46, 0.12);
+    --shadow-strong: 0 16px 50px rgba(26, 61, 46, 0.15);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* ===== BASE STYLES ===== */
+.microgreens-education {
+    font-family: var(--font-sans);
+    color: var(--forest-green);
+    background-color: var(--education-bg);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 700;
+    color: var(--forest-green);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: var(--sage-green);
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ===== HERO SECTION ===== */
+.education-hero {
+    padding: 140px 0 100px;
+    background: linear-gradient(135deg, var(--education-bg) 0%, var(--cream) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.education-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 20%, rgba(199, 234, 70, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(107, 142, 127, 0.06) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.hero-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.hero-title {
+    font-family: var(--font-serif);
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-weight: 800;
+    color: var(--forest-green);
+    margin-bottom: 2rem;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.hero-title .highlight {
+    background: linear-gradient(135deg, var(--lime-accent) 0%, var(--success-green) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    color: var(--charcoal);
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-stat {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-smooth);
+}
+
+.hero-stat:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.stat-number {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--lime-accent);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--sage-green);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.microgreens-showcase {
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.microgreen-sample {
+    position: absolute;
+    background: var(--white);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: var(--shadow-medium);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    transition: var(--transition-bounce);
+}
+
+.microgreen-sample i {
+    width: 40px;
+    height: 40px;
+    color: var(--lime-accent);
+}
+
+.microgreen-sample span {
+    font-weight: 600;
+    color: var(--forest-green);
+}
+
+.sample-1 {
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, #e8f5e8 0%, var(--white) 100%);
+    animation: float1 3s ease-in-out infinite;
+}
+
+.sample-2 {
+    top: 50%;
+    right: 0;
+    background: linear-gradient(135deg, #fef3e8 0%, var(--white) 100%);
+    animation: float2 3s ease-in-out infinite 1s;
+}
+
+.sample-3 {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #e8f8ff 0%, var(--white) 100%);
+    animation: float3 3s ease-in-out infinite 2s;
+}
+
+@keyframes float1 {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+@keyframes float2 {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(-2deg); }
+}
+
+@keyframes float3 {
+    0%, 100% { transform: translate(-50%, 0) rotate(0deg); }
+    50% { transform: translate(-50%, -12px) rotate(1deg); }
+}
+
+/* ===== WHAT ARE MICROGREENS SECTION ===== */
+.what-are-microgreens {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.growth-comparison {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.growth-stage {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 20px;
+    transition: var(--transition-smooth);
+    background: var(--education-bg);
+    border: 2px solid transparent;
+}
+
+.growth-stage.active {
+    background: var(--lime-accent);
+    color: var(--forest-green);
+    transform: scale(1.1);
+    border-color: var(--success-green);
+    box-shadow: var(--shadow-medium);
+}
+
+.stage-visual {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--sage-green);
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.growth-stage.active .stage-visual {
+    background: var(--forest-green);
+}
+
+.growth-stage h4 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.growth-stage p {
+    font-weight: 700;
+    color: var(--lime-accent);
+    margin-bottom: 0.5rem;
+}
+
+.growth-stage.active p {
+    color: var(--forest-green);
+}
+
+.growth-stage span {
+    font-size: 0.9rem;
+    color: var(--charcoal);
+}
+
+.growth-arrow {
+    color: var(--sage-green);
+    font-size: 2rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.1); opacity: 1; }
+}
+
+.explanation-box {
+    background: linear-gradient(135deg, var(--education-bg) 0%, var(--white) 100%);
+    padding: 3rem;
+    border-radius: 20px;
+    border-left: 5px solid var(--lime-accent);
+    box-shadow: var(--shadow-soft);
+}
+
+.explanation-box h3 {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    color: var(--forest-green);
+    margin-bottom: 1rem;
+}
+
+.explanation-box p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--charcoal);
+}
+
+/* ===== NUTRITION COMPARISON SECTION ===== */
+.nutrition-comparison {
+    padding: 100px 0;
+    background: var(--education-bg);
+}
+
+.comparison-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.comparison-card {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-medium);
+    transition: var(--transition-smooth);
+}
+
+.comparison-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-strong);
+}
+
+.comparison-card h3 {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    color: var(--forest-green);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.comparison-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.nutrient-comparison {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.nutrient-label {
+    font-weight: 600;
+    color: var(--forest-green);
+    font-size: 1rem;
+}
+
+.bar-container {
+    position: relative;
+    height: 60px;
+    background: var(--education-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 1rem;
+    transition: width 1s ease-out;
+    animation: growBar 2s ease-out;
+    animation-play-state: paused;
+}
+
+.bar.mature {
+    background: var(--sage-green);
+    z-index: 1;
+}
+
+.bar.microgreen {
+    background: linear-gradient(135deg, var(--lime-accent) 0%, var(--success-green) 100%);
+    z-index: 2;
+    top: 70px;
+    margin-top: 0;
+}
+
+@keyframes growBar {
+    from { width: 0 !important; }
+}
+
+.bar-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--forest-green);
+}
+
+.multiplier {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--forest-green);
+    color: var(--white);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.comparison-note {
+    text-align: center;
+    color: var(--sage-green);
+    font-style: italic;
+}
+
+/* ===== HEALTH BENEFITS SECTION ===== */
+.health-benefits {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.benefit-card {
+    background: var(--education-bg);
+    padding: 2.5rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: var(--transition-smooth);
+    border: 2px solid transparent;
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+    background: var(--white);
+    border-color: var(--lime-accent);
+    box-shadow: var(--shadow-medium);
+}
+
+.benefit-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: var(--lime-accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--forest-green);
+    font-size: 2rem;
+    transition: var(--transition-bounce);
+}
+
+.benefit-card:hover .benefit-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: var(--success-green);
+}
+
+.benefit-card h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--forest-green);
+    margin-bottom: 1rem;
+}
+
+.benefit-card p {
+    color: var(--charcoal);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* ===== HOW TO USE SECTION ===== */
+.how-to-use {
+    padding: 100px 0;
+    background: var(--education-bg);
+}
+
+.usage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.usage-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-smooth);
+}
+
+.usage-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-medium);
+}
+
+.usage-image {
+    height: 200px;
+    position: relative;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--lime-accent) 0%, var(--success-green) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    gap: 1rem;
+}
+
+.image-placeholder i {
+    width: 50px;
+    height: 50px;
+}
+
+.image-placeholder span {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.usage-card h3 {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    color: var(--forest-green);
+    padding: 1.5rem 2rem 1rem;
+}
+
+.usage-card p {
+    color: var(--charcoal);
+    padding: 0 2rem 2rem;
+    line-height: 1.6;
+}
+
+.usage-tips {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
+    border-left: 5px solid var(--lime-accent);
+}
+
+.usage-tips h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--forest-green);
+    margin-bottom: 1.5rem;
+}
+
+.usage-tips ul {
+    list-style: none;
+    padding: 0;
+}
+
+.usage-tips li {
+    padding: 0.5rem 0;
+    padding-left: 2rem;
+    position: relative;
+    color: var(--charcoal);
+    line-height: 1.6;
+}
+
+.usage-tips li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--success-green);
+    font-weight: bold;
+}
+
+/* ===== FAQ SECTION ===== */
+.faq-section {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--education-bg);
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.faq-item.active {
+    background: var(--white);
+    box-shadow: var(--shadow-soft);
+}
+
+.faq-question {
+    padding: 2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition-smooth);
+}
+
+.faq-question:hover {
+    background: rgba(199, 234, 70, 0.1);
+}
+
+.faq-question h3 {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    color: var(--forest-green);
+    margin: 0;
+}
+
+.faq-icon {
+    color: var(--lime-accent);
+    transition: var(--transition-smooth);
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+}
+
+.faq-answer p {
+    padding: 0 2rem 2rem;
+    color: var(--charcoal);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ===== CALL TO ACTION ===== */
+.education-cta {
+    padding: 100px 0;
+    background: var(--forest-green);
+    color: var(--white);
+}
+
+.cta-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.cta-content {
+    text-align: center;
+}
+
+.education-cta h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.education-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .hero-content {
+        order: 1;
+    }
+
+    .hero-image {
+        order: 2;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .hero-stats {
+        max-width: 400px;
+        margin: 0 auto 2rem;
+    }
+
+    .growth-comparison {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .growth-arrow {
+        transform: rotate(90deg);
+    }
+
+    .comparison-cards {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-container {
+        padding: 0 1rem;
+    }
+
+    .education-hero {
+        padding: 120px 0 80px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .microgreens-showcase {
+        height: 300px;
+    }
+
+    .microgreen-sample {
+        padding: 1.5rem;
+    }
+
+    .growth-stage {
+        padding: 1.5rem;
+    }
+
+    .stage-visual {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .explanation-box,
+    .usage-tips {
+        padding: 2rem;
+    }
+
+    .comparison-card {
+        padding: 2rem;
+    }
+
+    .bar-container {
+        height: 50px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .benefit-card {
+        padding: 2rem;
+    }
+
+    .benefit-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .usage-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-question {
+        padding: 1.5rem;
+    }
+
+    .faq-question h3 {
+        font-size: 1.1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-primary-fresh,
+    .btn-secondary-fresh {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .hero-stat {
+        padding: 1rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .growth-stage {
+        padding: 1rem;
+    }
+
+    .comparison-card {
+        padding: 1.5rem;
+    }
+
+    .bar-container {
+        height: 40px;
+    }
+
+    .bar {
+        padding: 0 0.5rem;
+    }
+
+    .bar-label {
+        font-size: 0.8rem;
+    }
+
+    .multiplier {
+        font-size: 0.75rem;
+        padding: 0.2rem 0.6rem;
+    }
+
+    .benefit-card {
+        padding: 1.5rem;
+    }
+
+    .faq-question h3 {
+        font-size: 1rem;
+    }
+}
+
+/* ===== ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .growth-arrow {
+        animation: none;
+    }
+
+    .sample-1,
+    .sample-2,
+    .sample-3 {
+        animation: none;
+    }
+
+    .bar {
+        animation: none;
+    }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+    .navbar-fresh,
+    .education-cta {
+        display: none !important;
+    }
+
+    .education-hero,
+    .what-are-microgreens,
+    .nutrition-comparison,
+    .health-benefits,
+    .how-to-use,
+    .faq-section {
+        padding: 2rem 0;
+        background: white !important;
+        color: black !important;
+    }
+}

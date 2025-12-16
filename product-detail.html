@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Aerthys</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="homepage-fresh.css" />
+    <link rel="stylesheet" href="products-premium.css" />
+    <link rel="stylesheet" href="product-detail.css" />
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="product-detail-page">
+
+    <!-- Navbar -->
+    <nav class="navbar-fresh">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand-fresh">
+                <img src="assets/Aerthys_logo.svg" alt="Aerthys" class="logo-fresh">
+                <i data-lucide="leaf" class="logo-leaf"></i>
+            </a>
+
+            <ul class="nav-menu-fresh">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="products.html" class="nav-link active">Shop</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="why-microgreens.html" class="nav-link">Why Microgreens</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="cart.html" class="cart-btn" style="text-decoration: none;">
+                    <i data-lucide="shopping-cart"></i>
+                    <span class="cart-count fab-cart-count">0</span>
+                </a>
+                <button class="mobile-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="detail-container">
+
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs">
+            <a href="index.html">Home</a> <i data-lucide="chevron-right" width="14"></i>
+            <a href="products.html">Shop</a> <i data-lucide="chevron-right" width="14"></i>
+            <span id="breadcrumb-current">Loading...</span>
+        </div>
+
+        <!-- 2-Column Product Layout -->
+        <div class="product-split-layout">
+
+            <!-- Left: Sticky Image -->
+            <div class="detail-image-section">
+                <div class="image-sticky-wrapper">
+                    <img src="" alt="Product" id="detail-img" class="detail-hero-img">
+                    <div class="image-zoom-hint">
+                        <i data-lucide="maximize-2" width="16"></i> Hover to Zoom
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Scrollable Info -->
+            <div class="detail-info-section">
+
+                <!-- Header -->
+                <div class="detail-header">
+                    <div id="detail-badges"></div>
+                    <h1 id="detail-name" class="detail-title">Loading...</h1>
+                    <div class="detail-meta">
+                        <span id="detail-category" class="meta-tag">Category</span>
+                        <div class="rating-stars">
+                            <i data-lucide="star" class="fill-star" width="16"></i>
+                            <i data-lucide="star" class="fill-star" width="16"></i>
+                            <i data-lucide="star" class="fill-star" width="16"></i>
+                            <i data-lucide="star" class="fill-star" width="16"></i>
+                            <i data-lucide="star" class="fill-star" width="16"></i>
+                            <span id="detail-reviews" class="review-count">(0 Reviews)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Price & Cart -->
+                <div class="detail-checkout-card">
+                    <div class="price-block">
+                        <span id="detail-price" class="main-price">₹0</span>
+                        <span id="detail-unit" class="unit-price">/ unit</span>
+                    </div>
+
+                    <div class="action-row">
+                        <div class="qty-selector-lg">
+                            <button onclick="updateQty(-1)"><i data-lucide="minus"></i></button>
+                            <input type="number" id="detail-qty" value="1" min="1" max="10" readonly>
+                            <button onclick="updateQty(1)"><i data-lucide="plus"></i></button>
+                        </div>
+                        <button id="add-to-cart-lg" class="add-cart-lg">
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="service-badges">
+                        <span><i data-lucide="clock" width="14"></i> Harvested Today</span>
+                        <span><i data-lucide="truck" width="14"></i> Next Day Delivery</span>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="content-block">
+                    <h3>Description</h3>
+                    <p id="detail-desc" class="description-text">
+                        Loading description...
+                    </p>
+                </div>
+
+                <!-- Nutrition -->
+                <div class="content-block nutrition-block">
+                    <h3>Nutrition Facts</h3>
+                    <div class="nutrition-grid" id="nutrition-grid">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <!-- Good to Know -->
+                <div class="content-block good-to-know">
+                    <h3>Good to Know</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="info-icon"><i data-lucide="calendar"></i></div>
+                            <div>
+                                <h4>Shelf Life</h4>
+                                <p>5-7 days refrigerated</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i data-lucide="utensils"></i></div>
+                            <div>
+                                <h4>Best Served</h4>
+                                <p>Raw in salads, garnish</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i data-lucide="thermometer"></i></div>
+                            <div>
+                                <h4>Storage</h4>
+                                <p>Keep refrigerated (4°C)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Related Products -->
+        <section class="related-section">
+            <h2 class="section-heading">You Might Also Like</h2>
+            <div class="products-grid" id="related-grid"
+                style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+                <!-- Related items -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer (Simulated) -->
+    <footer style="background: var(--forest-green); color: white; padding: 4rem 2rem; margin-top: 4rem;">
+        <div class="nav-container" style="text-align: center;">
+            <p>&copy; 2024 Aerthys. Premium Urban Farming.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="product-data.js"></script>
+    <script src="cart-logic.js"></script>
+    <!-- Reusing cart logic for addToCart functionality if possible, or duplicate snippet -->
+    <script src="product-detail.js"></script>
+
+</body>
+
+</html>

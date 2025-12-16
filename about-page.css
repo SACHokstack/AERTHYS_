@@ -1,0 +1,985 @@
+/* About Page Styles - Premium Apple-style Design */
+/* CSS Variables */
+:root {
+    /* Colors */
+    --cream: #faf8f3;
+    --light-sage: #e8f0ed;
+    --sage-green: #8da690;
+    --forest-green: #2d4a32;
+    --lime-accent: #c7ea46;
+    --charcoal: #2d2d2d;
+    --warm-white: #ffffff;
+
+    /* Typography */
+    --font-serif: 'Crimson Pro', serif;
+    --font-sans: 'DM Sans', sans-serif;
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px rgba(45, 74, 50, 0.08);
+    --shadow-medium: 0 8px 30px rgba(45, 74, 50, 0.12);
+    --shadow-strong: 0 12px 40px rgba(45, 74, 50, 0.16);
+
+    /* Border Radius */
+    --radius-small: 8px;
+    --radius-medium: 16px;
+    --radius-large: 24px;
+    --radius-xl: 32px;
+}
+
+/* Base Styles */
+.about-page {
+    background: var(--cream);
+    color: var(--charcoal);
+    min-height: 100vh;
+    display: block;
+    overflow-x: hidden;
+    padding-top: 0;
+}
+
+.about-page body {
+    padding-top: 0;
+    min-height: 100vh;
+}
+
+/* Navigation bar styles for about page */
+.about-page .navbar-fresh {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(250, 248, 243, 0.95);
+    backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid rgba(26, 61, 46, 0.08);
+    height: 80px;
+}
+
+.about-page .nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.about-page .nav-brand-fresh {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.about-page .logo-fresh {
+    height: 50px;
+    width: auto;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-page .nav-menu-fresh {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.about-page .nav-link {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--forest-green);
+    text-decoration: none;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-page .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--lime-accent), var(--sage-green));
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(-50%);
+    border-radius: 1px;
+}
+
+.about-page .nav-link:hover::after,
+.about-page .nav-link.active::after {
+    width: 100%;
+}
+
+.about-page .nav-link:hover {
+    color: var(--forest-green);
+    transform: translateY(-1px);
+}
+
+.about-page .nav-link.active {
+    color: var(--forest-green);
+}
+
+.about-page .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.about-page .cart-btn {
+    background: var(--forest-green);
+    border: none;
+    border-radius: 50px;
+    padding: 0.75rem 1.25rem;
+    color: var(--white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: var(--shadow-soft);
+}
+
+.about-page .cart-btn:hover {
+    background: var(--sage-green);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.about-page .cart-count {
+    background: var(--lime-accent);
+    color: var(--forest-green);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+.about-page .mobile-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.about-page .mobile-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--forest-green);
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ================================================= */
+/* SECTION 1: HERO WITH FOUNDER QUOTE */
+/* ================================================= */
+
+.hero-about {
+    background: var(--cream);
+    padding: 12rem 4rem 8rem 4rem;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    /* Ensure content is above bg-shapes */
+    margin-top: 0;
+}
+
+.hero-about-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.hero-about-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 6rem;
+    align-items: center;
+    width: 100%;
+    min-height: 60vh;
+}
+
+.hero-about-left {
+    padding-right: 2rem;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-about-title {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--forest-green);
+    margin-bottom: 3rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.founder-quote-large {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 500;
+    /* Increased weight for hierarchy */
+    color: var(--charcoal);
+    line-height: 1.4;
+    margin: 0 0 1.5rem 0;
+    position: relative;
+    padding: 0;
+}
+
+.founder-quote-large::before {
+    content: '"';
+    font-size: 4rem;
+    position: absolute;
+    left: -2rem;
+    top: -1rem;
+    color: var(--lime-accent);
+    font-family: var(--font-serif);
+    font-weight: 700;
+}
+
+.quote-attribution {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    color: var(--sage-green);
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+}
+
+.hero-intro-text {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--charcoal);
+    opacity: 0.9;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: rgba(199, 234, 70, 0.1);
+    border-left: 3px solid var(--lime-accent);
+}
+
+.hero-about-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.founder-photo-card {
+    background: var(--warm-white);
+    border-radius: var(--radius-large);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-medium);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 300px;
+}
+
+.founder-photo-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-strong);
+}
+
+.founder-photo-main {
+    width: 100%;
+    max-width: 320px;
+    /* Reduced max-width for balance */
+    aspect-ratio: 4/5;
+    /* Standardized aspect ratio */
+    object-fit: cover;
+    border-radius: var(--radius-medium);
+    margin-bottom: 1.5rem;
+    border: 3px solid var(--lime-accent);
+    box-shadow: 0 4px 12px rgba(199, 234, 70, 0.3);
+}
+
+.founder-caption h4 {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--forest-green);
+    margin-bottom: 0.5rem;
+}
+
+.founder-caption p {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    color: var(--sage-green);
+    font-weight: 500;
+}
+
+/* ================================================= */
+/* SECTION 2: THE JOURNEY */
+/* ================================================= */
+
+.journey-section {
+    background: linear-gradient(135deg, var(--light-sage) 0%, var(--cream) 100%);
+    padding: 6rem 4rem;
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+}
+
+.journey-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--forest-green);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.journey-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.journey-column {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    background: var(--warm-white);
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.journey-column:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-medium);
+}
+
+.journey-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--lime-accent), var(--sage-green));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem auto;
+}
+
+.journey-icon i {
+    color: var(--warm-white);
+    font-size: 2rem;
+}
+
+.journey-column h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--forest-green);
+    margin-bottom: 1.5rem;
+}
+
+.journey-column p {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--charcoal);
+    opacity: 0.9;
+}
+
+/* ================================================= */
+/* SECTION 3: OUR FARM */
+/* ================================================= */
+
+.farm-section {
+    background: var(--cream);
+    padding: 8rem 4rem;
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+}
+
+.farm-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-subtitle {
+    font-family: var(--font-sans);
+    font-size: 1.2rem;
+    color: var(--sage-green);
+    text-align: center;
+    font-weight: 500;
+}
+
+.farm-photos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin: 4rem 0;
+}
+
+.farm-photo-card {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.farm-photo-card:hover {
+    transform: translateY(-8px);
+}
+
+.farm-photo-placeholder {
+    height: 220px;
+    border-radius: var(--radius-medium);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.farm-photo-placeholder:hover {
+    transform: scale(1.02);
+}
+
+.farm-photo-placeholder.rooftop {
+    background: linear-gradient(135deg, #4ade80, #16a34a);
+}
+
+.farm-photo-placeholder.hydroponic {
+    background: linear-gradient(135deg, #06b6d4, #0891b2);
+}
+
+.farm-photo-placeholder.growing {
+    background: linear-gradient(135deg, var(--lime-accent), var(--sage-green));
+}
+
+.farm-photo-placeholder i {
+    color: var(--warm-white);
+    font-size: 3rem;
+    opacity: 0.9;
+}
+
+.farm-photo-card h4 {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--forest-green);
+}
+
+.farm-stats-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.farm-stat-card {
+    background: var(--warm-white);
+    padding: 2.5rem 2rem;
+    border-radius: var(--radius-medium);
+    border-top: 4px solid var(--forest-green);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.farm-stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+}
+
+.farm-stat-card h4 {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--forest-green);
+    margin-bottom: 1rem;
+}
+
+.farm-stat-card p {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--charcoal);
+    opacity: 0.9;
+}
+
+/* ================================================= */
+/* SECTION 4: BY THE NUMBERS */
+/* ================================================= */
+
+.numbers-section {
+    background: var(--light-sage);
+    padding: 6rem 4rem;
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+}
+
+.numbers-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.numbers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    justify-items: center;
+}
+
+.number-badge {
+    text-align: center;
+}
+
+.number-circle {
+    width: 140px;
+    height: 140px;
+    background: var(--lime-accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+    box-shadow: var(--shadow-medium);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.number-circle:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-strong);
+}
+
+.number-value {
+    font-family: var(--font-serif);
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--forest-green);
+    line-height: 1;
+}
+
+.number-label {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--sage-green);
+    letter-spacing: 0.5px;
+}
+
+/* ================================================= */
+/* SECTION 5: OUR PROCESS */
+/* ================================================= */
+
+.process-section {
+    background: var(--cream);
+    padding: 8rem 4rem;
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+}
+
+.process-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.process-timeline {
+    position: relative;
+    margin-top: 4rem;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--lime-accent), var(--sage-green));
+    transform: translateX(-50%);
+    border-radius: 2px;
+    z-index: 1;
+}
+
+.process-step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.step-left {
+    justify-content: flex-start;
+}
+
+.step-right {
+    justify-content: flex-end;
+}
+
+.step-left .step-content {
+    order: 1;
+    text-align: left;
+    padding-right: 3rem;
+    max-width: 45%;
+}
+
+.step-left .step-badge {
+    order: 2;
+}
+
+.step-right .step-content {
+    order: 2;
+    text-align: right;
+    padding-left: 3rem;
+    max-width: 45%;
+}
+
+.step-right .step-badge {
+    order: 1;
+}
+
+.step-badge {
+    width: 80px;
+    height: 80px;
+    background: var(--warm-white);
+    border: 4px solid var(--lime-accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: var(--shadow-soft);
+    z-index: 3;
+}
+
+.step-badge i {
+    color: var(--forest-green);
+    font-size: 1.8rem;
+}
+
+.step-content {
+    background: var(--warm-white);
+    padding: 2.5rem;
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-content:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+}
+
+.step-period {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--lime-accent);
+    background: rgba(199, 234, 70, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-small);
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.step-content h4 {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--forest-green);
+    margin-bottom: 1rem;
+}
+
+.step-content p {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--charcoal);
+    opacity: 0.9;
+}
+
+/* ================================================= */
+/* SECTION 6: CERTIFICATIONS */
+/* ================================================= */
+
+.certifications-section {
+    background: var(--warm-white);
+    padding: 6rem 4rem;
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+}
+
+.certifications-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.certifications-badges {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    justify-items: center;
+}
+
+.certification-badge {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.certification-badge:hover {
+    transform: translateY(-8px);
+}
+
+.cert-circle {
+    width: 120px;
+    height: 120px;
+    background: var(--warm-white);
+    border: 3px solid var(--forest-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease;
+}
+
+.cert-circle:hover {
+    border-color: var(--lime-accent);
+    box-shadow: var(--shadow-medium);
+}
+
+.cert-circle i {
+    color: var(--forest-green);
+    font-size: 2.5rem;
+    transition: color 0.3s ease;
+}
+
+.certification-badge:hover .cert-circle i {
+    color: var(--lime-accent);
+}
+
+.certification-badge h4 {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--forest-green);
+    line-height: 1.4;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+/* ================================================= */
+/* ================================================= */
+/* RESPONSIVE DESIGN */
+/* ================================================= */
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    .about-page .nav-menu-fresh {
+        display: none;
+        /* Mobile toggle active */
+    }
+
+    .about-page .mobile-toggle {
+        display: flex;
+    }
+
+    .hero-about {
+        padding: 10rem 2rem 6rem 2rem;
+    }
+
+    .hero-about-content {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        text-align: center;
+    }
+
+    .hero-about-left {
+        padding-right: 0;
+        align-items: center;
+    }
+
+    .hero-intro-text {
+        text-align: left;
+        max-width: 800px;
+        margin: 2rem auto 0;
+    }
+
+    .hero-about-title {
+        font-size: 3rem;
+    }
+
+    .founder-quote-large {
+        font-size: 1.8rem;
+    }
+
+    .section-title {
+        font-size: 3rem;
+    }
+
+    .journey-grid,
+    .farm-photos-grid,
+    .farm-stats-cards,
+    .numbers-grid,
+    .certifications-badges {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .process-timeline {
+        padding-left: 0;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .hero-about {
+        padding: 8rem 1.5rem 4rem 1.5rem;
+    }
+
+    .hero-about-title {
+        font-size: 2.5rem;
+    }
+
+    .founder-quote-large {
+        font-size: 1.5rem;
+    }
+
+    .founder-quote-large::before {
+        font-size: 3rem;
+        left: -1rem;
+        top: -1rem;
+    }
+
+    .founder-photo-main {
+        max-width: 100%;
+        width: 260px;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    /* Stack Grids */
+    .journey-grid,
+    .farm-photos-grid,
+    .farm-stats-cards,
+    .numbers-grid,
+    .certifications-badges {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    /* Padding Adjustments */
+    .journey-section,
+    .farm-section,
+    .process-section,
+    .certifications-section,
+    .numbers-section {
+        padding: 4rem 1.5rem;
+    }
+
+    /* Process Timeline Mobile Fix */
+    .timeline-line {
+        left: 30px;
+        transform: none;
+    }
+
+    .process-step {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 80px;
+        margin-bottom: 3rem;
+    }
+
+    .step-left,
+    .step-right {
+        justify-content: flex-start;
+        padding-left: 0;
+    }
+
+    .step-content {
+        padding: 1.5rem;
+        text-align: left !important;
+        margin: 0 !important;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .step-badge {
+        left: 30px;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 60px;
+    }
+
+    .step-badge i {
+        font-size: 1.5rem;
+    }
+
+    /* Stats */
+    .number-circle {
+        width: 110px;
+        height: 110px;
+    }
+
+    .number-value {
+        font-size: 3.5rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+
+    .hero-about,
+    .journey-section,
+    .farm-section,
+    .numbers-section,
+    .process-section,
+    .certifications-section {
+        padding: 2rem 1rem;
+        page-break-inside: avoid;
+    }
+
+    .founder-photo-card,
+    .navbar-fresh,
+    .about-cta {
+        display: none !important;
+    }
+
+    .journey-column,
+    .farm-stat-card,
+    .step-content,
+    .certification-badge {
+        box-shadow: none;
+    }
+}

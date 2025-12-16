@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Aerthys</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="homepage-fresh.css">
+    <link rel="stylesheet" href="checkout.css">
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="checkout-flow">
+
+    <!-- Header -->
+    <header class="checkout-header">
+        <div class="header-inner">
+            <a href="index.html" class="nav-brand-fresh">
+                <img src="assets/Aerthys_logo.svg" alt="Aerthys" class="logo-fresh" style="height:40px;">
+            </a>
+
+            <div class="stepper-container">
+                <div class="step-item active">
+                    <div class="step-circle">1</div>
+                    <span>Cart</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-item">
+                    <div class="step-circle">2</div>
+                    <span>Checkout</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-item">
+                    <div class="step-circle">3</div>
+                    <span>Done</span>
+                </div>
+            </div>
+
+            <div class="secure-badge">
+                <i data-lucide="lock" width="14"></i> Secure
+            </div>
+        </div>
+    </header>
+
+    <div class="container-checkout">
+
+        <!-- Page Title -->
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <h1 style="font-family:var(--font-serif); font-size:2rem; color:var(--forest-premium);">Your Fresh
+                Selections</h1>
+            <a href="products.html" style="color:var(--text-gray); text-decoration:none; font-size:0.9rem;">Continue
+                Shopping</a>
+        </div>
+
+        <div class="cart-layout">
+
+            <!-- Left: Cart Items -->
+            <div class="cart-items-wrapper">
+                <div class="cart-table-header">
+                    <div>Product</div>
+                    <div>Price</div>
+                    <div>Quantity</div>
+                    <div style="text-align:right">Total</div>
+                </div>
+
+                <div id="cart-items-container">
+                    <!-- Injected by JS -->
+                </div>
+
+                <!-- Empty State -->
+                <div id="empty-state" class="empty-cart">
+                    <i data-lucide="shopping-bag" style="width:60px; height:60px; color:#ccc; margin-bottom:1rem;"></i>
+                    <h3 style="font-family:var(--font-serif); font-size:1.5rem;">Your cart is empty</h3>
+                    <p style="color:var(--text-gray); margin-bottom:2rem;">Looks like you haven't added any fresh greens
+                        yet.</p>
+                    <a href="products.html" class="checkout-btn-main" style="width:auto; display:inline-flex;">
+                        Browse Products
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Summary -->
+            <aside class="order-summary">
+                <h3 style="margin-bottom:1.5rem; font-family:var(--font-serif); font-size:1.3rem;">Order Summary</h3>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">₹0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Delivery</span>
+                    <span id="delivery">₹0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax</span>
+                    <span>Included</span>
+                </div>
+
+                <div class="summary-total">
+                    <span>Total</span>
+                    <span id="final-total">₹0</span>
+                </div>
+
+                <!-- Delivery Info Box -->
+                <div style="background:var(--mint-light); padding:1rem; border-radius:8px; margin-top:1.5rem;">
+                    <div
+                        style="display:flex; gap:0.5rem; color:var(--forest-premium); font-weight:600; font-size:0.9rem; margin-bottom:0.3rem;">
+                        <i data-lucide="truck" width="16"></i> Delivery by Tomorrow
+                    </div>
+                    <p style="font-size:0.8rem; color:var(--text-gray); margin:0;">
+                        Freshly harvested and delivered to your doorstep.
+                    </p>
+                </div>
+
+                <a href="checkout.html" id="checkout-btn" class="checkout-btn-main">
+                    Proceed to Checkout
+                </a>
+
+                <div style="margin-top:1.5rem; display:flex; justify-content:center; gap:1rem; opacity:0.6;">
+                    <i data-lucide="shield-check" width="20" title="Secure"></i>
+                    <i data-lucide="refresh-ccw" width="20" title="Returns"></i>
+                    <i data-lucide="leaf" width="20" title="Fresh"></i>
+                </div>
+            </aside>
+
+        </div>
+    </div>
+
+    <script src="cart-logic.js"></script>
+</body>
+
+</html>

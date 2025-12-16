@@ -3,238 +3,579 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover why microgreens are the perfect choice for restaurants and wellness businesses - nutrient-dense, sustainable, and available year-round.">
-    <title>Why Microgreens - Benefits for Your Business | Aerthys</title>
+    <meta name="description" content="Discover the incredible nutritional benefits of microgreens - tiny powerhouses packed with 4-40x more nutrients than mature vegetables. Learn about health benefits, usage, and more.">
+    <title>Why Microgreens - Nutritional Benefits & Health Guide | Aerthys</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles-dark.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="microgreens-education.css">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="nav-brand">
-                <img src="assets/Aerthys_logo.jpeg" alt="Aerthys" class="logo">
+<body class="microgreens-education">
+
+    <!-- Fixed Navigation -->
+    <nav class="navbar-fresh" data-aos="fade-down" data-aos-duration="800">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand-fresh">
+                <img src="assets/Aerthys_logo.svg" alt="Aerthys" class="logo-fresh">
+                <i data-lucide="leaf" class="logo-leaf"></i>
             </a>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="why-microgreens.html" class="active">Why Microgreens</a></li>
-                <li><a href="about-microgreens.html">About Microgreens</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="contact.html">Contact</a></li>
+
+            <ul class="nav-menu-fresh">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="products.html" class="nav-link">Shop</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="why-microgreens.html" class="nav-link active">Why Microgreens</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
+
+            <div class="nav-actions">
+                <button class="cart-btn">
+                    <i data-lucide="shopping-cart"></i>
+                    <span class="cart-count">3</span>
+                </button>
+                <button class="mobile-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <!-- 1. HERO -->
-    <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="container">
-            <h1>Why Aerthys Microgreens?</h1>
-            <p class="subtitle"><em>The Gold Standard in Flavor, Nutrition & Sustainability</em></p>
-            <p class="hero-description">Elevate your menu with living nutrients — harvested at peak potency, delivered farm-fresh.</p>
-            <a href="#cta" class="btn">Partner with Aerthys →</a>
-        </div>
-    </section>
-
-    <!-- 2. STATS -->
-    <section class="stats">
-        <div class="container">
-            <h2>The Numbers Speak</h2>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <strong>4–40×</strong>
-                    <span>More Nutrients than mature crops</span>
-                </div>
-                <div class="stat-item">
-                    <strong>90%</strong>
-                    <span>Less Water vs. traditional farming</span>
-                </div>
-                <div class="stat-item">
-                    <strong>7–14 Days</strong>
-                    <span>From seed to harvest</span>
-                </div>
-                <div class="stat-item">
-                    <strong>0</strong>
-                    <span>Pesticides. Ever.</span>
+    <!-- Hero Section -->
+    <section class="education-hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+                    The Nutritional <span class="highlight">Powerhouses</span> You're Not Eating Yet
+                </h1>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="400">
+                    Discover why microgreens pack 4-40× more nutrients than their full-grown counterparts, and how these tiny greens can transform your health.
+                </p>
+                <div class="hero-stats" data-aos="fade-up" data-aos-delay="600">
+                    <div class="hero-stat">
+                        <span class="stat-number">40×</span>
+                        <span class="stat-label">More Vitamin E</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-number">7-14</span>
+                        <span class="stat-label">Days to Harvest</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Pesticide Free</span>
+                    </div>
                 </div>
             </div>
-            <p class="source">Source: Journal of Agricultural and Food Chemistry, USDA</p>
-        </div>
-    </section>
-
-    <!-- 3. PERFECT FOR -->
-    <section class="badges">
-        <div class="container">
-            <h2>Built for the Best Kitchens</h2>
-            <div class="badges-grid">
-                <div class="badge-item">
-                    <div class="badge-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
-                        </svg>
+            <div class="hero-image" data-aos="fade-left" data-aos-delay="400">
+                <div class="microgreens-showcase">
+                    <div class="microgreen-sample sample-1">
+                        <i data-lucide="sprout"></i>
+                        <span>Broccoli</span>
                     </div>
-                    <h3>MICHELIN CHEFS</h3>
-                    <p>"Finally, an ingredient that plates like art."</p>
-                </div>
-                <div class="badge-item">
-                    <div class="badge-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M3 21h18M4 18h2a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2z"/>
-                        </svg>
+                    <div class="microgreen-sample sample-2">
+                        <i data-lucide="flower-2"></i>
+                        <span>Radish</span>
                     </div>
-                    <h3>LUXURY HOTELS</h3>
-                    <p>"Consistent, vibrant, year-round supply."</p>
-                </div>
-                <div class="badge-item">
-                    <div class="badge-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                        </svg>
+                    <div class="microgreen-sample sample-3">
+                        <i data-lucide="leaf"></i>
+                        <span>Spinach</span>
                     </div>
-                    <h3>WELLNESS RETREATS</h3>
-                    <p>"Our clients feel the difference in 7 days."</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. KEY BENEFITS -->
-    <section class="benefits">
-        <div class="container">
-            <h2>Key Benefits</h2>
+    <!-- What Are Microgreens Section -->
+    <section class="what-are-microgreens">
+        <div class="section-container">
+            <div class="section-header" data-aos="fade-up" data-aos-delay="200">
+                <h2 class="section-title">What Are Microgreens?</h2>
+                <p class="section-subtitle">Understanding the lifecycle and optimal harvest time</p>
+            </div>
+
+            <div class="growth-comparison" data-aos="fade-up" data-aos-delay="400">
+                <div class="growth-stage">
+                    <div class="stage-visual sprout">
+                        <i data-lucide="circle-dot"></i>
+                    </div>
+                    <h4>Sprouts</h4>
+                    <p>2-7 days</p>
+                    <span>Seeds with roots, no leaves</span>
+                </div>
+
+                <div class="growth-arrow">
+                    <i data-lucide="arrow-right"></i>
+                </div>
+
+                <div class="growth-stage active">
+                    <div class="stage-visual microgreen">
+                        <i data-lucide="sprout"></i>
+                    </div>
+                    <h4>Microgreens</h4>
+                    <p>7-14 days</p>
+                    <span>First true leaves, peak nutrition</span>
+                </div>
+
+                <div class="growth-arrow">
+                    <i data-lucide="arrow-right"></i>
+                </div>
+
+                <div class="growth-stage">
+                    <div class="stage-visual mature">
+                        <i data-lucide="trees"></i>
+                    </div>
+                    <h4>Mature Plant</h4>
+                    <p>60-90 days</p>
+                    <span>Full growth, diluted nutrients</span>
+                </div>
+            </div>
+
+            <div class="explanation-box" data-aos="fade-up" data-aos-delay="600">
+                <h3>The Sweet Spot: 7-14 Days</h3>
+                <p>Microgreens are harvested at the perfect moment - when the plant has developed its first set of true leaves but before it matures. At this stage, the plant contains the highest concentration of vitamins, minerals, and antioxidants as it channels all its energy into growth.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nutrition Comparison -->
+    <section class="nutrition-comparison">
+        <div class="section-container">
+            <div class="section-header" data-aos="fade-up" data-aos-delay="200">
+                <h2 class="section-title">Nutrition Comparison</h2>
+                <p class="section-subtitle">See how microgreens stack up against their mature counterparts</p>
+            </div>
+
+            <div class="comparison-cards">
+                <!-- Spinach Comparison -->
+                <div class="comparison-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Spinach</h3>
+                    <div class="comparison-bars">
+                        <div class="nutrient-comparison">
+                            <span class="nutrient-label">Vitamin C</span>
+                            <div class="bar-container">
+                                <div class="bar mature" style="width: 20%">
+                                    <span class="bar-label">Mature</span>
+                                </div>
+                                <div class="bar microgreen" style="width: 100%">
+                                    <span class="bar-label">Microgreen</span>
+                                    <span class="multiplier">5×</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nutrient-comparison">
+                            <span class="nutrient-label">Vitamin K</span>
+                            <div class="bar-container">
+                                <div class="bar mature" style="width: 30%">
+                                    <span class="bar-label">Mature</span>
+                                </div>
+                                <div class="bar microgreen" style="width: 100%">
+                                    <span class="bar-label">Microgreen</span>
+                                    <span class="multiplier">3×</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nutrient-comparison">
+                            <span class="nutrient-label">Iron</span>
+                            <div class="bar-container">
+                                <div class="bar mature" style="width: 25%">
+                                    <span class="bar-label">Mature</span>
+                                </div>
+                                <div class="bar microgreen" style="width: 100%">
+                                    <span class="bar-label">Microgreen</span>
+                                    <span class="multiplier">4×</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Broccoli Comparison -->
+                <div class="comparison-card" data-aos="fade-up" data-aos-delay="500">
+                    <h3>Broccoli</h3>
+                    <div class="comparison-bars">
+                        <div class="nutrient-comparison">
+                            <span class="nutrient-label">Vitamin E</span>
+                            <div class="bar-container">
+                                <div class="bar mature" style="width: 2.5%">
+                                    <span class="bar-label">Mature</span>
+                                </div>
+                                <div class="bar microgreen" style="width: 100%">
+                                    <span class="bar-label">Microgreen</span>
+                                    <span class="multiplier">40×</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nutrient-comparison">
+                            <span class="nutrient-label">Vitamin A</span>
+                            <div class="bar-container">
+                                <div class="bar mature" style="width: 15%">
+                                    <span class="bar-label">Mature</span>
+                                </div>
+                                <div class="bar microgreen" style="width: 100%">
+                                    <span class="bar-label">Microgreen</span>
+                                    <span class="multiplier">7×</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nutrient-comparison">
+                            <span class="nutrient-label">Vitamin C</span>
+                            <div class="bar-container">
+                                <div class="bar mature" style="width: 20%">
+                                    <span class="bar-label">Mature</span>
+                                </div>
+                                <div class="bar microgreen" style="width: 100%">
+                                    <span class="bar-label">Microgreen</span>
+                                    <span class="multiplier">5×</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comparison-note" data-aos="fade-up" data-aos-delay="700">
+                <p><strong>Source:</strong> Journal of Agricultural and Food Chemistry (2012) - USDA Research</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Benefits -->
+    <section class="health-benefits">
+        <div class="section-container">
+            <div class="section-header" data-aos="fade-up" data-aos-delay="200">
+                <h2 class="section-title">Health Benefits</h2>
+                <p class="section-subtitle">Science-backed benefits of adding microgreens to your diet</p>
+            </div>
+
             <div class="benefits-grid">
-                <div class="benefit-item">
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="benefit-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 2L3.09 8.26l-.09.17L3 8.5v7a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7l-.09-.17L20.91 8.26L12 2z"/>
-                        </svg>
+                        <i data-lucide="shield-check"></i>
                     </div>
-                    <strong>Peak Nutrient Density</strong>
-                    <span>Red cabbage microgreens: 40× Vitamin E</span>
+                    <h3>Boosts Immunity</h3>
+                    <p>High in vitamins C and E, plus antioxidants that help strengthen your immune system and fight off infections.</p>
                 </div>
-                <div class="benefit-item">
+
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="benefit-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="M12 6v6l4 2"/>
-                        </svg>
+                        <i data-lucide="heart"></i>
                     </div>
-                    <strong>7–14 Day Harvest</strong>
-                    <span>Fresh, local, always in season</span>
+                    <h3>Supports Heart Health</h3>
+                    <p>Rich in polyphenols and antioxidants that may help reduce cholesterol and lower blood pressure naturally.</p>
                 </div>
-                <div class="benefit-item">
+
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="500">
                     <div class="benefit-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M9 12l2 2 4-4"/>
-                            <circle cx="12" cy="12" r="9"/>
-                        </svg>
+                        <i data-lucide="activity"></i>
                     </div>
-                    <strong>Zero Pesticides</strong>
-                    <span>Grown in controlled environments</span>
+                    <h3>Aids Digestion</h3>
+                    <p>Packed with enzymes and fiber that promote healthy digestion and improve nutrient absorption.</p>
                 </div>
-                <div class="benefit-item">
+
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="600">
                     <div class="benefit-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
-                        </svg>
+                        <i data-lucide="flame"></i>
                     </div>
-                    <strong>90% Less Water</strong>
-                    <span>Sustainable by design</span>
+                    <h3>Reduces Inflammation</h3>
+                    <p>Contains powerful anti-inflammatory compounds that may help reduce chronic inflammation in the body.</p>
                 </div>
-                <div class="benefit-item">
+
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="700">
                     <div class="benefit-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                            <circle cx="12" cy="10" r="3"/>
-                        </svg>
+                        <i data-lucide="sparkles"></i>
                     </div>
-                    <strong>Urban Farmed</strong>
-                    <span>Grown in your city. Zero emissions.</span>
+                    <h3>Supports Healthy Skin</h3>
+                    <p>Vitamins A, C, and E work together to promote collagen production and protect against skin damage.</p>
                 </div>
-                <div class="benefit-item">
+
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="800">
                     <div class="benefit-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <circle cx="12" cy="12" r="3"/>
-                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-                        </svg>
+                        <i data-lucide="shield"></i>
                     </div>
-                    <strong>Chef's Palette</strong>
-                    <span>20+ varieties. Color, texture, flavor.</span>
+                    <h3>May Prevent Cancer</h3>
+                    <p>Studies suggest certain microgreens contain compounds that may help prevent cancer cell formation.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 5. VISUAL PROOF -->
-    <section class="gallery">
-        <div class="container">
-            <h2>See the Difference</h2>
-            <div class="images">
-                <div class="gallery-item">
-                    <img src="assets/sunflower-microgreens.jpg" alt="Sunflower microgreens macro shot" loading="lazy">
-                    <span>Sunflower</span>
+    <!-- How to Use -->
+    <section class="how-to-use">
+        <div class="section-container">
+            <div class="section-header" data-aos="fade-up" data-aos-delay="200">
+                <h2 class="section-title">How to Use Microgreens</h2>
+                <p class="section-subtitle">Simple ways to add nutrition and flavor to your meals</p>
+            </div>
+
+            <div class="usage-grid">
+                <div class="usage-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="usage-image">
+                        <div class="image-placeholder">
+                            <i data-lucide="salad"></i>
+                            <span>Salads</span>
+                        </div>
+                    </div>
+                    <h3>In Salads</h3>
+                    <p>Mix microgreens with your favorite greens for added flavor, texture, and nutrition.</p>
                 </div>
-                <div class="gallery-item">
-                    <img src="assets/broccoli-microgreens.jpg" alt="Broccoli microgreens macro shot" loading="lazy">
-                    <span>Broccoli</span>
+
+                <div class="usage-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="usage-image">
+                        <div class="image-placeholder">
+                            <i data-lucide="sandwich"></i>
+                            <span>Sandwiches</span>
+                        </div>
+                    </div>
+                    <h3>On Sandwiches</h3>
+                    <p>Add a crunchy, flavorful layer to sandwiches, wraps, and burgers.</p>
                 </div>
-                <div class="gallery-item">
-                    <img src="assets/radish-microgreens.jpg" alt="Radish microgreens close-up" loading="lazy">
-                    <span>Radish</span>
+
+                <div class="usage-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="usage-image">
+                        <div class="image-placeholder">
+                            <i data-lucide="cup-soda"></i>
+                            <span>Smoothies</span>
+                        </div>
+                    </div>
+                    <h3>In Smoothies</h3>
+                    <p>Blend mild microgreens into smoothies for an extra nutrient boost without changing the taste.</p>
+                </div>
+
+                <div class="usage-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="usage-image">
+                        <div class="image-placeholder">
+                            <i data-lucide="chef-hat"></i>
+                            <span>Garnish</span>
+                        </div>
+                    </div>
+                    <h3>As Garnish</h3>
+                    <p>Elevate any dish with colorful microgreens that add both beauty and nutrition.</p>
+                </div>
+
+                <div class="usage-card" data-aos="fade-up" data-aos-delay="700">
+                    <div class="usage-image">
+                        <div class="image-placeholder">
+                            <i data-lucide="glass-water"></i>
+                            <span>Juices</span>
+                        </div>
+                    </div>
+                    <h3>In Fresh Juices</h3>
+                    <p>Juice mild microgreens with fruits and vegetables for concentrated nutrition.</p>
                 </div>
             </div>
-            <p class="gallery-note">Harvested at 10 days. Peak flavor. Peak nutrition.</p>
+
+            <div class="usage-tips" data-aos="fade-up" data-aos-delay="800">
+                <h3>Pro Tips:</h3>
+                <ul>
+                    <li>Start with mild varieties like pea shoots or sunflower</li>
+                    <li>Add microgreens just before serving to maintain crispness</li>
+                    <li>Store in the refrigerator and use within 5-7 days for best quality</li>
+                    <li>Rinse gently before eating, no cooking required</li>
+                </ul>
+            </div>
         </div>
     </section>
 
-    <!-- 6. TRUST -->
-    <section class="trust">
-        <div class="container">
-            <h2>Trusted by India's Finest</h2>
-            <div class="logos">
-                <div class="logo-item">
-                    <svg width="80" height="24" viewBox="0 0 80 24" fill="none" stroke="currentColor" stroke-width="1">
-                        <text x="0" y="16" font-family="serif" font-size="14" font-weight="bold">THE LEELA</text>
-                    </svg>
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="section-container">
+            <div class="section-header" data-aos="fade-up" data-aos-delay="200">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Everything you need to know about microgreens</p>
+            </div>
+
+            <div class="faq-container" data-aos="fade-up" data-aos-delay="400">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Are microgreens safe to eat raw?</h3>
+                        <i data-lucide="plus" class="faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, microgreens are completely safe to eat raw when grown in clean, controlled environments like ours. They're actually best eaten raw to preserve their maximum nutritional value and crisp texture.</p>
+                    </div>
                 </div>
-                <div class="logo-item">
-                    <svg width="80" height="24" viewBox="0 0 80 24" fill="none" stroke="currentColor" stroke-width="1">
-                        <text x="0" y="16" font-family="serif" font-size="14" font-weight="bold">OBEROI</text>
-                    </svg>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How long do microgreens stay fresh?</h3>
+                        <i data-lucide="plus" class="faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>When stored properly in the refrigerator, fresh microgreens typically last 5-7 days. Keep them in their original packaging or a breathable container, and avoid washing until ready to eat.</p>
+                    </div>
                 </div>
-                <div class="logo-item">
-                    <svg width="80" height="24" viewBox="0 0 80 24" fill="none" stroke="currentColor" stroke-width="1">
-                        <text x="0" y="16" font-family="serif" font-size="14" font-weight="bold">INDIAN ACCENT</text>
-                    </svg>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do microgreens taste different from regular greens?</h3>
+                        <i data-lucide="plus" class="faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Microgreens often have more concentrated, intense flavors than their mature counterparts. For example, radish microgreens have a peppery kick, while pea shoots are sweet and tender. The flavors are generally milder and more approachable than you might expect.</p>
+                    </div>
                 </div>
-                <div class="logo-item">
-                    <svg width="80" height="24" viewBox="0 0 80 24" fill="none" stroke="currentColor" stroke-width="1">
-                        <text x="0" y="16" font-family="serif" font-size="14" font-weight="bold">WASABI</text>
-                    </svg>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can kids eat microgreens?</h3>
+                        <i data-lucide="plus" class="faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! Microgreens are excellent for children as they're nutrient-dense and often milder in taste than mature vegetables. Start with sweeter varieties like pea shoots or sunflower microgreens, and use them as fun, colorful additions to familiar foods.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How much should I eat daily?</h3>
+                        <i data-lucide="plus" class="faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A small handful (about 1-2 ounces) of microgreens per day can provide significant nutritional benefits. Because they're so nutrient-dense, you don't need large quantities to get the health benefits. Start small and gradually increase as you get used to incorporating them into your diet.</p>
+                    </div>
                 </div>
             </div>
-            <p class="trust-note">+40 Michelin-starred chefs</p>
         </div>
     </section>
 
-    <!-- 7. FINAL CTA -->
-    <section id="cta" class="final-cta">
-        <div class="container">
-            <h2>Ready to Elevate Your Menu?</h2>
-            <a href="contact.html" class="btn large">Request Chef's Sample Kit →</a>
-            <p class="cta-details">Free delivery • 3 premium varieties • 48-hour harvest-to-door<br>
-               <strong>Limited to 50 kitchens per month.</strong></p>
+    <!-- Call to Action -->
+    <section class="education-cta">
+        <div class="cta-container">
+            <div class="cta-content" data-aos="zoom-in" data-aos-delay="200">
+                <h2>Ready to Transform Your Health?</h2>
+                <p>Start your microgreens journey today with our fresh, locally-grown varieties delivered right to your door.</p>
+                <div class="cta-buttons">
+                    <a href="products.html" class="btn-primary-fresh">
+                        <span class="btn-text">Shop Microgreens</span>
+                        <i data-lucide="arrow-right" class="btn-icon"></i>
+                    </a>
+                    <a href="contact.html" class="btn-secondary-fresh">
+                        <span class="btn-text">Learn More</span>
+                        <i data-lucide="info" class="btn-icon"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Initialize AOS animations
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-out-quart',
+            once: true,
+            mirror: false
+        });
+
+        // Mobile menu toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const navMenu = document.querySelector('.nav-menu-fresh');
+
+        mobileToggle?.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileToggle.classList.toggle('active');
+        });
+
+        // Navbar scroll effect
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.navbar-fresh');
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            if (scrollTop > lastScrollTop && scrollTop > 200) {
+                navbar.classList.add('nav-hidden');
+            } else {
+                navbar.classList.remove('nav-hidden');
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+
+        // FAQ Accordion functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            const icon = item.querySelector('.faq-icon');
+
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                        const otherIcon = otherItem.querySelector('.faq-icon');
+                        otherIcon.setAttribute('data-lucide', 'plus');
+                    }
+                });
+
+                // Toggle current item
+                if (isActive) {
+                    item.classList.remove('active');
+                    icon.setAttribute('data-lucide', 'plus');
+                } else {
+                    item.classList.add('active');
+                    icon.setAttribute('data-lucide', 'minus');
+                }
+
+                // Refresh icons
+                lucide.createIcons();
+            });
+        });
+
+        // Animated counters for nutrition bars
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const bars = entry.target.querySelectorAll('.bar.microgreen');
+                    bars.forEach((bar, index) => {
+                        setTimeout(() => {
+                            bar.style.animationPlayState = 'running';
+                        }, index * 200);
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.comparison-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Cart functionality
+        document.querySelector('.cart-btn')?.addEventListener('click', () => {
+            console.log('Cart clicked');
+        });
+    </script>
+
 </body>
 </html>

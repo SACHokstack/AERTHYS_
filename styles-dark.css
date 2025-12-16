@@ -463,19 +463,34 @@ section {
 }
 
 .nav-brand .logo {
-    height: 40px;
+    height: 50px;
     width: auto;
     object-fit: contain;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 5px 10px;
-    border-radius: 4px;
-    filter: brightness(1.1) contrast(1.1);
-    transition: all 0.2s ease;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 5px 15px;
+    border-radius: 8px;
+    filter: brightness(1.05) saturate(1.02);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: optimizeSpeed;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
 }
 
 .nav-brand:hover .logo {
-    transform: scale(1.05);
-    filter: brightness(1.2) contrast(1.2);
+    transform: translateZ(0) scale(1.08) translateY(-1px);
+    filter: brightness(1.12) saturate(1.08) drop-shadow(0 4px 12px rgba(255, 255, 255, 0.1));
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 2px 8px rgba(201, 169, 110, 0.12);
+}
+
+.nav-brand:active .logo {
+    transform: translateZ(0) scale(1.02) translateY(0px);
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-toggle {
