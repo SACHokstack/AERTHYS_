@@ -358,16 +358,62 @@ img {
 
 /* --- Section 5: Solution Timeline --- */
 .solution-timeline {
-    padding: 100px 0;
-    background: var(--white);
+    padding: 80px 0 120px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
     text-align: center;
     overflow-x: hidden;
+    position: relative;
+    z-index: 1000;
+    isolation: isolate;
+}
+
+.solution-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(140, 198, 63, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(46, 92, 57, 0.1) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .solution-timeline h2 {
-    font-size: 3rem;
-    margin-bottom: 220px;
-    /* Increased to accommodate top cards */
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    color: var(--primary-green);
+    position: relative;
+    z-index: 2;
+}
+
+.section-subtitle {
+    font-size: 1.3rem;
+    color: var(--accent-lime);
+    margin-bottom: 50px;
+    font-weight: 500;
+    position: relative;
+    z-index: 2;
+}
+
+.core-problem {
+    background: linear-gradient(135deg, var(--primary-green), var(--accent-lime));
+    color: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    margin-bottom: 60px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(46, 92, 57, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.problem-statement {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.6;
+    margin: 0;
 }
 
 .timeline {
@@ -375,27 +421,28 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1000px;
-    margin: 0 auto 200px auto;
-    /* Added bottom margin for bottom cards */
-    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    z-index: 1100;
+    min-height: 400px;
 }
 
 .timeline .line {
     position: absolute;
     top: 50%;
-    left: 0;
-    width: 100%;
+    left: 20px;
+    right: 20px;
     height: 4px;
-    background: var(--primary-green);
+    background: linear-gradient(90deg, var(--primary-green), var(--accent-lime));
     transform: translateY(-50%);
-    z-index: 1;
-    border-radius: 4px;
+    z-index: 1001;
+    border-radius: 2px;
 }
 
 .node {
     position: relative;
-    z-index: 2;
+    z-index: 1200;
     flex: 1;
     display: flex;
     justify-content: center;
@@ -411,72 +458,169 @@ img {
 }
 
 .icon {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     background: var(--accent-lime);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--white);
-    font-size: 1.5rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.8rem;
+    box-shadow: 0 8px 20px rgba(140, 198, 63, 0.3);
+    transition: all 0.3s ease;
     cursor: pointer;
     position: relative;
-    z-index: 3;
-    animation: bounce 2s infinite;
+    z-index: 1300;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 .icon:hover {
     transform: scale(1.2);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 25px rgba(140, 198, 63, 0.4);
+    background: var(--primary-green);
     animation: none;
 }
 
 .node:hover .icon {
     transform: scale(1.2);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 25px rgba(140, 198, 63, 0.3);
+    background: var(--primary-green);
 }
 
 .node:hover .card {
-    transform: translateX(-50%) scale(1.05);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-    z-index: 10;
+    transform: translateX(-50%) scale(1.05) translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    z-index: 1500;
+    border-color: var(--accent-lime);
+    visibility: visible;
+    opacity: 1;
+}
+
+.node:hover .card .stat {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Staggered animation for cards */
+.node:nth-child(1) .card {
+    animation: slideInUp 0.6s ease-out;
+}
+
+.node:nth-child(2) .card {
+    animation: slideInUp 0.6s ease-out 0.2s both;
+}
+
+.node:nth-child(3) .card {
+    animation: slideInUp 0.6s ease-out 0.4s both;
+}
+
+.node:nth-child(4) .card {
+    animation: slideInUp 0.6s ease-out 0.6s both;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
 }
 
 .card {
     position: absolute;
-    width: 250px;
+    width: 260px;
     left: 50%;
-    transform: translateX(-50%);
-    padding: 20px;
+    transform: translateX(-50%) translateZ(0);
+    padding: 25px;
     background: var(--white);
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    border: 1px solid rgba(140, 198, 63, 0.1);
+    backdrop-filter: blur(10px);
+    z-index: 1400;
+    visibility: hidden;
+    opacity: 0;
+    will-change: transform;
+}
+
+.card .stat {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-lime);
+    margin-bottom: 10px;
+    display: block;
+    line-height: 1;
+}
+
+.card .highlight {
+    font-size: 0.9rem;
+    color: var(--accent-lime);
+    font-weight: 600;
+    margin-top: 15px;
+    padding: 8px 12px;
+    background: rgba(140, 198, 63, 0.1);
+    border-radius: 20px;
+    display: inline-block;
 }
 
 .card:hover {
     transform: translateX(-50%) scale(1.05);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-    z-index: 10;
+    z-index: 1500;
+    visibility: visible;
+    opacity: 1;
 }
 
 .node.top .card {
-    bottom: 40px;
-    border-bottom: 4px solid var(--accent-lime);
+    bottom: 80px;
+    border-bottom: 3px solid var(--accent-lime);
 }
 
 .node.bottom .card {
-    top: 40px;
-    border-top: 4px solid var(--accent-lime);
+    top: 80px;
+    border-top: 3px solid var(--accent-lime);
 }
 
 .card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--primary-green);
+    font-weight: 600;
+    position: relative;
+    z-index: 1401;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--dark-text);
+    position: relative;
+    z-index: 1401;
+}
+
+.card .stat {
+    position: relative;
+    z-index: 1401;
+}
+
+.card .highlight {
+    position: relative;
+    z-index: 1401;
 }
 
 
@@ -695,34 +839,54 @@ footer {
     }
 
     /* Timeline Mobile Fixes */
+    .solution-timeline {
+        padding: 60px 0 80px 0;
+    }
+
     .solution-timeline h2 {
+        margin-bottom: 20px;
+        font-size: 2.5rem;
+    }
+
+    .section-subtitle {
         margin-bottom: 40px;
-        /* Reset huge desktop margin */
-        font-size: 2.2rem;
+        font-size: 1.1rem;
+    }
+
+    .core-problem {
+        margin-bottom: 40px;
+        padding: 30px 20px;
+    }
+
+    .problem-statement {
+        font-size: 1.2rem;
     }
 
     .timeline {
         flex-direction: column;
         align-items: flex-start;
-        padding-left: 20px;
+        padding: 40px 20px;
         margin-bottom: 40px;
+        min-height: auto;
         /* Reset huge desktop margin */
     }
 
     .timeline .line {
-        width: 4px;
-        height: 100%;
+        width: 3px;
+        height: calc(100% - 40px);
         left: 20px;
-        top: 0;
+        top: 20px;
         transform: none;
     }
 
     .node {
         flex-direction: row;
         width: 100%;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         justify-content: flex-start;
-        align-items: center;
+        align-items: flex-start;
+        position: relative;
+        min-height: 80px;
     }
 
     .point {
@@ -746,7 +910,20 @@ footer {
         border-bottom: none !important;
         border-left: 4px solid var(--accent-lime);
         margin-left: 0;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        padding: 25px;
+    }
+
+    .card .stat {
+        font-size: 2rem;
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        margin-right: 20px;
+        flex-shrink: 0;
     }
 
     .card:hover {
