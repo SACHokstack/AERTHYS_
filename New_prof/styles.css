@@ -176,32 +176,49 @@ img {
 }
 
 
-/* --- Section 2: Why Microgreens --- */
-.why-microgreens {
-    padding: 100px 0;
+/* --- Section 2: Why Microgreens (Scroll-driven) --- */
+.why-microgreens-scroll {
     background: var(--white);
 }
 
-.zig-zag {
+.scroll-container {
+    position: relative;
+}
+
+.sticky-content {
+    position: sticky;
+    top: 0;
+    height: 100vh;
     display: flex;
     align-items: center;
     gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.zig-zag .visual {
+.sticky-content .visual {
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.zig-zag .visual img {
+.sticky-content .visual img {
+    max-width: 100%;
+    height: auto;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.zig-zag .content {
+.content-panel {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.zig-zag h2 {
+.content-panel h2 {
     font-size: 3rem;
     margin-bottom: 20px;
     text-align: center;
@@ -215,76 +232,96 @@ img {
     text-align: center;
 }
 
-.primary-benefits {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+/* Scroll content wrapper */
+.scroll-content-wrapper {
+    position: relative;
+    min-height: 250px;
+}
+
+.scroll-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+}
+
+.scroll-item.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Large benefit card for scroll view */
+.benefit-card.large {
+    text-align: center;
+    padding: 40px 30px;
+    background: var(--light-bg);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.benefit-card.large .icon {
+    font-size: 4rem;
+    display: block;
     margin-bottom: 20px;
 }
 
-.benefit-card {
-    text-align: center;
-    padding: 20px;
-    background: var(--light-bg);
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.benefit-card:hover {
-    transform: translateY(-2px);
-}
-
-.benefit-card .icon {
-    font-size: 2rem;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.benefit-card h3 {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
+.benefit-card.large h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
     color: var(--primary-green);
 }
 
-.benefit-card p {
-    font-size: 0.9rem;
+.benefit-card.large p {
+    font-size: 1.1rem;
     color: var(--dark-text);
-    line-height: 1.4;
+    line-height: 1.6;
 }
 
-.why-microgreens .accordion {
-    max-width: none;
-    margin-top: 20px;
-}
-
-.why-microgreens .accordion-body ul {
-    list-style: none;
-    padding: 0;
-}
-
-.why-microgreens .accordion-body li {
-    margin-bottom: 10px;
-    padding: 10px 0;
-    border-bottom: 1px solid var(--light-bg);
-}
-
-.benefit-list {
-    list-style: none;
-}
-
-.benefit-list li {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+/* Progress dots */
+.scroll-dots {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
 }
 
-.benefit-list .icon {
-    font-size: 1.5rem;
-    margin-right: 15px;
-    background: var(--light-bg);
-    padding: 10px;
+.scroll-dots .dot {
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
+    background: var(--light-bg);
+    border: 2px solid var(--primary-green);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.scroll-dots .dot.active {
+    background: var(--primary-green);
+    transform: scale(1.2);
+}
+
+.scroll-dots .dot:hover {
+    background: var(--accent-lime);
+}
+
+/* Scroll triggers - invisible spacers that drive the scroll */
+.scroll-triggers {
+    position: relative;
+    pointer-events: none;
+}
+
+.scroll-triggers .trigger {
+    height: 60vh;
+}
+
+/* First trigger is shorter since content is already visible */
+.scroll-triggers .trigger:first-child {
+    height: 30vh;
 }
 
 
@@ -796,7 +833,6 @@ footer {
 
     /* Global Adjustments */
     .banner-section,
-    .why-microgreens,
     .about-us,
     .mission,
     .solution-timeline,
@@ -804,6 +840,55 @@ footer {
     .contact-section {
         padding: 60px 0;
         /* Reduced padding for mobile */
+    }
+
+    /* Why Microgreens Scroll Section - Mobile */
+    .sticky-content {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .sticky-content .visual {
+        width: 100%;
+    }
+
+    .sticky-content .visual img {
+        max-width: 80%;
+    }
+
+    .content-panel {
+        width: 100%;
+    }
+
+    .content-panel h2 {
+        font-size: 2rem;
+    }
+
+    .scroll-content-wrapper {
+        min-height: 200px;
+    }
+
+    .benefit-card.large {
+        padding: 25px 20px;
+    }
+
+    .benefit-card.large .icon {
+        font-size: 3rem;
+    }
+
+    .benefit-card.large h3 {
+        font-size: 1.4rem;
+    }
+
+    .benefit-card.large p {
+        font-size: 1rem;
+    }
+
+    .scroll-triggers .trigger {
+        height: 50vh;
     }
 
     .slide-content h1 {

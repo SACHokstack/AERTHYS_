@@ -69,4 +69,58 @@ document.addEventListener('DOMContentLoaded', () => {
             item.classList.toggle('active');
         });
     });
+
+
+    // --- Why Microgreens Scroll Logic ---
+    const scrollSection = document.querySelector('.why-microgreens-scroll');
+    const scrollItems = document.querySelectorAll('.scroll-item');
+    const scrollDots = document.querySelectorAll('.scroll-dots .dot');
+    const triggers = document.querySelectorAll('.scroll-triggers .trigger');
+
+    if (scrollSection && triggers.length > 0) {
+        let currentIndex = 0;
+
+        const updateActiveItem = (index) => {
+            if (index === currentIndex) return;
+            currentIndex = index;
+
+            // Update content items
+            scrollItems.forEach((item, i) => {
+                item.classList.toggle('active', i === index);
+            });
+
+            // Update dots
+            scrollDots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        };
+
+        // Scroll-based detection using Intersection Observer
+        const observerOptions = {
+            root: null,
+            rootMargin: '-40% 0px -40% 0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const index = parseInt(entry.target.dataset.index);
+                    updateActiveItem(index);
+                }
+            });
+        }, observerOptions);
+
+        triggers.forEach(trigger => observer.observe(trigger));
+
+        // Click on dots to scroll to that section
+        scrollDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                const targetTrigger = triggers[index];
+                if (targetTrigger) {
+                    targetTrigger.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            });
+        });
+    }
 });

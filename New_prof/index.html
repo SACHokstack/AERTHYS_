@@ -45,60 +45,120 @@
         </div>
     </section>
 
-    <!-- Section 2: Why Microgreens? -->
-    <section class="why-microgreens">
-        <div class="container zig-zag">
-            <div class="visual">
-                <img src="assets/why_microgreens.png" alt="Nutrient Density Comparison">
-            </div>
-            <div class="content">
-                <h2>Why Microgreens?</h2>
-                <p class="subtitle">Unlock superior nutrition with nature's most potent greens</p>
-                <div class="primary-benefits">
-                    <div class="benefit-card">
-                        <span class="icon">🌱</span>
-                        <h3>Nutrient Density</h3>
-                        <p>Up to 40 times more nutrients per gram than mature counterparts</p>
-                    </div>
-                    <div class="benefit-card">
-                        <span class="icon">🛡️</span>
-                        <h3>Antioxidant Property</h3>
-                        <p>Rich in natural antioxidants for oxidative stress relief</p>
-                    </div>
-                    <div class="benefit-card">
-                        <span class="icon">💊</span>
-                        <h3>Vitamins & Minerals</h3>
-                        <p>Packed with essential vitamins and minerals in concentrated form</p>
-                    </div>
-                    <div class="benefit-card">
-                        <span class="icon">🥬</span>
-                        <h3>Fresh Quality</h3>
-                        <p>Harvested young for superior freshness, texture, and color</p>
-                    </div>
-                    <div class="benefit-card">
-                        <span class="icon">♻️</span>
-                        <h3>Sustainably Grown</h3>
-                        <p>Requires less space, resources, and grows in shorter duration</p>
-                    </div>
-                    <div class="benefit-card">
-                        <span class="icon">🏠</span>
-                        <h3>Locally Sourced</h3>
-                        <p>Reduces food miles with local, near-urban production</p>
-                    </div>
+    <!-- Section 2: Why Microgreens? (Scroll-driven) -->
+    <section class="why-microgreens-scroll">
+        <div class="scroll-container">
+            <!-- Sticky content that stays fixed -->
+            <div class="sticky-content">
+                <div class="visual">
+                    <img src="assets/why_microgreens.png" alt="Nutrient Density Comparison">
                 </div>
-                <div class="accordion">
-                    <div class="item">
-                        <button class="accordion-header">Additional Benefits</button>
-                        <div class="accordion-body">
-                            <ul>
-                                <li><strong>Weight Management:</strong> Rich in fiber for improved gut health</li>
-                                <li><strong>Year-around Availability:</strong> Harvested irrespective of seasonal changes</li>
-                                <li><strong>Visual Appeal:</strong> Enhances dish appeal with premium color and texture</li>
-                                <li><strong>Healthier Eating:</strong> Improves vegetable variety without diet changes</li>
-                            </ul>
+                <div class="content-panel">
+                    <h2>Why Microgreens?</h2>
+                    <p class="subtitle">Unlock superior nutrition with nature's most potent greens</p>
+
+                    <!-- Content that changes on scroll -->
+                    <div class="scroll-content-wrapper">
+                        <div class="scroll-item active" data-index="0">
+                            <div class="benefit-card large">
+                                <span class="icon">🌱</span>
+                                <h3>Nutrient Density</h3>
+                                <p>Up to 40 times more nutrients per gram than mature counterparts</p>
+                            </div>
+                        </div>
+                        <div class="scroll-item" data-index="1">
+                            <div class="benefit-card large">
+                                <span class="icon">🛡️</span>
+                                <h3>Antioxidant Property</h3>
+                                <p>Rich in natural antioxidants for oxidative stress relief</p>
+                            </div>
+                        </div>
+                        <div class="scroll-item" data-index="2">
+                            <div class="benefit-card large">
+                                <span class="icon">💊</span>
+                                <h3>Vitamins & Minerals</h3>
+                                <p>Packed with essential vitamins and minerals in concentrated form</p>
+                            </div>
+                        </div>
+                        <div class="scroll-item" data-index="3">
+                            <div class="benefit-card large">
+                                <span class="icon">🥬</span>
+                                <h3>Fresh Quality</h3>
+                                <p>Harvested young for superior freshness, texture, and color</p>
+                            </div>
+                        </div>
+                        <div class="scroll-item" data-index="4">
+                            <div class="benefit-card large">
+                                <span class="icon">♻️</span>
+                                <h3>Sustainably Grown</h3>
+                                <p>Requires less space, resources, and grows in shorter duration</p>
+                            </div>
+                        </div>
+                        <div class="scroll-item" data-index="5">
+                            <div class="benefit-card large">
+                                <span class="icon">🏠</span>
+                                <h3>Locally Sourced</h3>
+                                <p>Reduces food miles with local, near-urban production</p>
+                            </div>
+                        </div>
+                        <div class="scroll-item" data-index="6">
+                            <div class="benefit-card large">
+                                <span class="icon">⚖️</span>
+                                <h3>Weight Management</h3>
+                                <p>Rich in fiber for improved gut health and digestive wellness</p>
+                            </div>
+                        </div>
+                        <div class="scroll-item" data-index="7">
+                            <div class="benefit-card large">
+                                <span class="icon">📅</span>
+                                <h3>Year-round Availability</h3>
+                                <p>Harvested irrespective of seasonal changes for consistent supply</p>
+                            </div>
+                        </div>
+                        <div class="scroll-item" data-index="8">
+                            <div class="benefit-card large">
+                                <span class="icon">🎨</span>
+                                <h3>Visual Appeal</h3>
+                                <p>Enhances dish appeal with premium color and texture</p>
+                            </div>
+                        </div>
+                        <div class="scroll-item" data-index="9">
+                            <div class="benefit-card large">
+                                <span class="icon">🥗</span>
+                                <h3>Healthier Eating</h3>
+                                <p>Improves vegetable variety without major diet changes</p>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Progress dots -->
+                    <div class="scroll-dots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                        <span class="dot" data-index="3"></span>
+                        <span class="dot" data-index="4"></span>
+                        <span class="dot" data-index="5"></span>
+                        <span class="dot" data-index="6"></span>
+                        <span class="dot" data-index="7"></span>
+                        <span class="dot" data-index="8"></span>
+                        <span class="dot" data-index="9"></span>
+                    </div>
                 </div>
+            </div>
+
+            <!-- Scroll triggers (invisible spacers) -->
+            <div class="scroll-triggers">
+                <div class="trigger" data-index="0"></div>
+                <div class="trigger" data-index="1"></div>
+                <div class="trigger" data-index="2"></div>
+                <div class="trigger" data-index="3"></div>
+                <div class="trigger" data-index="4"></div>
+                <div class="trigger" data-index="5"></div>
+                <div class="trigger" data-index="6"></div>
+                <div class="trigger" data-index="7"></div>
+                <div class="trigger" data-index="8"></div>
+                <div class="trigger" data-index="9"></div>
             </div>
         </div>
     </section>
