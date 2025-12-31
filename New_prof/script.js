@@ -123,4 +123,40 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+
+    // --- Scroll Reveal Animations ---
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, {
+        root: null,
+        rootMargin: '0px 0px -100px 0px',
+        threshold: 0.1
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+
+    // --- Smooth scroll for anchor links ---
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                e.preventDefault();
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
 });
