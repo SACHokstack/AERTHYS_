@@ -159,4 +159,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+
+    // --- About Us Carousel ---
+    const aboutSlides = document.querySelectorAll('.about-slide');
+    if (aboutSlides.length > 0) {
+        let aboutCurrentSlide = 0;
+        const aboutInterval = setInterval(() => {
+            aboutSlides[aboutCurrentSlide].classList.remove('active');
+            aboutCurrentSlide = (aboutCurrentSlide + 1) % aboutSlides.length;
+            aboutSlides[aboutCurrentSlide].classList.add('active');
+        }, 4000);
+    }
+
+
+    // --- Mission Carousel ---
+    const missionSlides = document.querySelectorAll('.mission-slide');
+    if (missionSlides.length > 0) {
+        let missionCurrentSlide = 0;
+        const missionInterval = setInterval(() => {
+            missionSlides[missionCurrentSlide].classList.remove('active');
+            missionCurrentSlide = (missionCurrentSlide + 1) % missionSlides.length;
+            missionSlides[missionCurrentSlide].classList.add('active');
+        }, 5000);
+    }
 });
