@@ -78,6 +78,23 @@ const WhyMicrogreens = () => {
                 </div>
 
                 <div className="wm-content">
+                    {/* Scrollable Text Side */}
+                    <div className="wm-text-col">
+                        {features.map((feature, index) => (
+                            <div
+                                key={feature.id}
+                                data-index={index}
+                                className={`feature-text-block ${index === activeFeature ? 'active' : ''}`}
+                            >
+                                <h3 className="wm-feature-title">{feature.title}</h3>
+                                <p className="wm-feature-desc">{feature.desc}</p>
+                            </div>
+                        ))}
+                        <div className="wm-cta-block">
+                            <button className="btn btn-primary">Enquire for supply</button>
+                        </div>
+                    </div>
+
                     {/* Sticky Image Side */}
                     <div className="wm-image-col">
                         <div className="wm-sticky-frame">
@@ -96,23 +113,6 @@ const WhyMicrogreens = () => {
                             <div className="wm-image-overlay">
                                 <span className="wm-counter">0{activeFeature + 1}</span>
                             </div>
-                        </div>
-                    </div>
-
-                    {/* Scrollable Text Side */}
-                    <div className="wm-text-col">
-                        {features.map((feature, index) => (
-                            <div
-                                key={feature.id}
-                                data-index={index}
-                                className={`feature-text-block ${index === activeFeature ? 'active' : ''}`}
-                            >
-                                <h3 className="wm-feature-title">{feature.title}</h3>
-                                <p className="wm-feature-desc">{feature.desc}</p>
-                            </div>
-                        ))}
-                        <div className="wm-cta-block">
-                            <button className="btn btn-primary">Enquire for supply</button>
                         </div>
                     </div>
                 </div>

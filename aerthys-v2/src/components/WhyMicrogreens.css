@@ -4,8 +4,13 @@
 }
 
 .wm-header {
-    text-align: center;
-    margin-bottom: 4rem;
+    text-align: left;
+    margin-bottom: 5rem;
+    max-width: 800px;
+}
+
+.wm-header .section-title {
+    text-align: left;
 }
 
 .wm-content {
@@ -28,23 +33,23 @@
 
 .wm-text-col {
     flex: 1;
-    padding-left: 0;
+    padding-right: 0;
 }
 
 @media (min-width: 992px) {
     .wm-text-col {
-        padding-left: 4rem;
+        padding-right: 4rem;
     }
 
     .wm-sticky-frame {
         position: -webkit-sticky;
         position: sticky;
-        top: 50vh;
-        transform: translateY(-50%);
-        height: 60vh;
+        top: 150px;
+        /* Stay below navbar & header */
+        height: 70vh;
         border-radius: 20px;
         overflow: hidden;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
     }
 }
 
