@@ -11,7 +11,7 @@ const FounderStory = () => {
                     <div className="founder-image-col">
                         <div className="founder-frame">
                             <img
-                                src="https://images.unsplash.com/photo-1542315750-f8674d852fd0?q=80&w=1000" // Placeholder for Founder
+                                src="/images/founder.jpeg"
                                 alt="Theivanth Rajamohan"
                                 className="founder-img"
                                 loading="lazy"

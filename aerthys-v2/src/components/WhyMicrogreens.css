@@ -61,13 +61,14 @@
     position: absolute;
     bottom: 20px;
     right: 20px;
-    background: white;
-    padding: 10px 20px;
-    border-radius: 50px;
-    font-family: var(--font-heading);
+    background: var(--color-accent);
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-family: var(--font-body);
     font-weight: 700;
-    color: var(--color-primary);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    color: var(--color-text-main);
+    box-shadow: 0 10px 30px rgba(5, 142, 63, 0.15);
 }
 
 .feature-text-block {
@@ -78,57 +79,83 @@
     opacity: 0;
     filter: blur(5px);
     transform: translateY(50px) scale(0.95);
-    transition: all 0.6s ease-out;
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
     padding: 2rem 0;
-    border-left: none;
-    padding-left: 2rem;
+    border-left: 2px solid rgba(5, 142, 63, 0.1);
+    padding-left: 3rem;
 }
 
 .feature-text-block.active {
     opacity: 1;
     filter: blur(0);
     transform: translateY(0) scale(1);
+    border-left-color: var(--color-primary);
 }
 
 .wm-feature-title {
-    font-family: var(--font-serif);
-    font-size: 2.5rem;
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    font-weight: 700;
     color: var(--color-primary);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
 }
 
 .wm-feature-desc {
-    font-size: 1.2rem;
-    color: var(--color-text-muted);
-    max-width: 400px;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: var(--color-text-main);
+    max-width: 450px;
+    line-height: 1.8;
 }
 
 .wm-cta-block {
     min-height: 20vh;
     display: flex;
     align-items: center;
-    padding-left: 2rem;
+    padding-left: 3rem;
 }
 
 @media (max-width: 991px) {
+    .wm-header {
+        margin-bottom: 2rem;
+    }
+
+    .wm-feature-title {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .wm-feature-desc {
+        font-size: 1rem;
+    }
+
     .feature-text-block {
         min-height: auto;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         opacity: 1;
         filter: blur(0);
         transform: none;
         border: none;
         padding: 1.5rem;
         background: white;
-        border-radius: 12px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(30, 47, 35, 0.05);
     }
 
     .wm-sticky-frame {
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         position: relative;
         top: auto;
         transform: none;
-        height: 400px;
+        height: 300px;
+        border-radius: 12px;
+    }
+
+    .wm-cta-block {
+        padding-left: 0;
+        justify-content: center;
+        min-height: auto;
+        margin-top: 2rem;
     }
 }

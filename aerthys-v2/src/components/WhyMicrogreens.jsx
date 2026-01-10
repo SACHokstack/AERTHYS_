@@ -25,13 +25,13 @@ const features = [
         id: 4,
         title: 'Easy to Digest',
         desc: 'High in fibre. Gentle on the gut.',
-        image: 'https://images.unsplash.com/photo-1595855739343-4e427d11ce83?q=80&w=1000' // Keeping placeholder due to quota
+        image: 'https://images.unsplash.com/photo-1543339308-43e59d6b73a6?q=80&w=1000' // Fresh, light salad for Digestibility
     },
     {
         id: 5,
         title: 'Sustainable Choice',
         desc: 'Locally grown. Less space. Fewer resources.',
-        image: 'https://images.unsplash.com/photo-1532336414038-cf00a91fe5ed?q=80&w=1000'
+        image: 'https://images.unsplash.com/photo-1590682680695-43b964a3ae17?q=80&w=1000' // Modern vertical farm for Sustainability
     }
 ];
 

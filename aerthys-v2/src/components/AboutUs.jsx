@@ -7,9 +7,9 @@ import 'swiper/css/effect-fade';
 import './AboutUs.css';
 
 const images = [
-    'https://images.unsplash.com/photo-1591465001581-d42f5eb5e574?q=80&w=1600',
-    'https://images.unsplash.com/photo-1615484477885-d6e8a4a2a123?q=80&w=1600',
-    'https://images.unsplash.com/photo-1533038590840-1cde6e668a91?q=80&w=1600'
+    'https://images.unsplash.com/photo-1590682680695-43b964a3ae17?q=80&w=1600', // Vertical Farm
+    'https://images.unsplash.com/photo-1516259670064-245f4645ad61?q=80&w=1600', // Modern farm setting
+    'https://images.unsplash.com/photo-1615484477885-d6e8a4a2a123?q=80&w=1600'  // Harvest detail
 ];
 
 const AboutUs = () => {
