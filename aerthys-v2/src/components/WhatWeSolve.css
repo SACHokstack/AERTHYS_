@@ -1,7 +1,7 @@
 .wws-section {
     padding: var(--section-padding);
-    background-color: var(--color-bg-light);
-    /* slight overlay or texture potentially */
+    background-color: var(--color-bg-dark);
+    /* Evergreen */
 }
 
 .timeline-container {
@@ -16,8 +16,9 @@
     top: 0;
     bottom: 0;
     left: 50%;
-    width: 2px;
-    background-color: #ddd;
+    width: 1px;
+    background-color: var(--color-primary);
+    opacity: 0.2;
     transform: translateX(-50%);
 }
 
@@ -41,22 +42,22 @@
 .timeline-point {
     position: absolute;
     top: 1.5rem;
-    width: 20px;
-    height: 20px;
-    background-color: var(--color-primary);
+    width: 16px;
+    height: 16px;
+    background-color: var(--color-accent);
     border-radius: 50%;
-    border: 4px solid white;
-    box-shadow: 0 0 0 2px var(--color-primary);
+    border: 3px solid var(--color-bg-dark);
+    box-shadow: 0 0 0 2px var(--color-accent);
     z-index: 2;
     transition: all 0.3s ease;
 }
 
 .timeline-item.left .timeline-point {
-    right: -10px;
+    right: -8px;
 }
 
 .timeline-item.right .timeline-point {
-    left: -10px;
+    left: -8px;
 }
 
 .timeline-content {
@@ -64,30 +65,29 @@
 }
 
 .problem-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    /* Subtle shadow initially */
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2.5rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    border: 1px solid transparent;
-    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     overflow: hidden;
 }
 
 .problem-card:hover,
 .problem-card.active {
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
     border-color: var(--color-accent);
+    background: rgba(255, 255, 255, 0.06);
 }
 
 .problem-header {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     justify-content: flex-end;
-    /* for left items */
 }
 
 .timeline-item.right .problem-header {
@@ -96,49 +96,72 @@
 
 .problem-icon {
     font-size: 1.5rem;
-    color: var(--color-gold);
+    color: var(--color-accent);
 }
 
 .problem-title {
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--color-text-main);
+    font-family: var(--font-extra);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-bg-light);
+    /* Snow */
 }
 
 .problem-body {
     overflow: hidden;
-    /* For animation */
 }
 
 .problem-desc {
-    color: var(--color-text-muted);
+    color: rgba(252, 247, 248, 0.7);
+    /* Snow with opacity */
     font-size: 1rem;
-    margin-top: 1rem;
-    line-height: 1.6;
+    margin-top: 1.5rem;
+    line-height: 1.7;
 }
 
 /* Responsiveness */
 @media (max-width: 768px) {
+    .timeline-container {
+        padding: 1rem 0;
+        overflow-x: hidden;
+    }
+
     .timeline-line {
-        left: 20px;
+        left: 30px;
     }
 
     .timeline-item {
         width: 100%;
         left: 0 !important;
-        padding-left: 50px;
-        padding-right: 0;
+        padding-left: 60px;
+        padding-right: 1rem;
         text-align: left !important;
+        margin-bottom: 2.5rem;
     }
 
     .timeline-item.left .timeline-point,
     .timeline-item.right .timeline-point {
-        left: 10px;
+        left: 22px;
         right: auto;
+    }
+
+    .problem-card {
+        padding: 1.5rem;
+        height: auto;
+        /* Ensure height scales with content */
+    }
+
+    .problem-body {
+        overflow: visible;
+        /* Prevent text truncation */
     }
 
     .problem-header {
         justify-content: flex-start !important;
+        gap: 1rem;
+    }
+
+    .problem-title {
+        font-size: 1.15rem;
     }
 }
