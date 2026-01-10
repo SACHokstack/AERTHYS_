@@ -1,22 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Young+Serif&family=Crimson+Pro:wght@400;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/recoleta');
 
 :root {
-  --color-primary: #1A4D2E; /* Deep Forest Green */
-  --color-primary-dark: #0F2A1D;
-  --color-accent: #8FD694; /* Fresh Green */
-  --color-gold: #C5A065; /* Premium Gold */
-  --color-bg-light: #F9F7F2; /* Creamy White */
-  --color-bg-dark: #121212; /* Rich Black */
-  --color-text-main: #1A1A1A;
-  --color-text-light: #F9F9F9;
-  --color-text-muted: #666666;
-  
-  --font-heading: 'Outfit', sans-serif;
-  --font-serif: 'Playfair Display', serif;
+  /* PRIMARY: 30% - Forest Green (Trust, Nature, Sustainability) */
+  --color-primary: #058E3F;
+  --color-primary-dark: #046b2f;
+
+  /* ACCENT: 10% - Green Yellow (Freshness, Life, Energy) */
+  --color-accent: #C9F95E;
+
+  /* BASE: 60% - Snow (Cleanliness, Breathability, Premium Calm) */
+  --color-bg-light: #FCF7F8;
+
+  /* EVERGREEN: Elements & Text (Depth, Authority, Maturity) */
+  --color-text-main: #1E2F23;
+  --color-text-muted: rgba(30, 47, 35, 0.7);
+  --color-bg-dark: #1E2F23;
+
+  /* FONTS */
+  --font-heading: 'Recoleta', 'Young Serif', serif;
   --font-body: 'Inter', sans-serif;
-  
+  --font-extra: 'Novarese', 'Crimson Pro', serif;
+
   --spacing-container: 1200px;
-  --section-padding: 6rem 2rem;
+  --section-padding: 8rem 2rem;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 4rem 1rem;
+  }
 }
 
 * {
@@ -34,10 +47,32 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2 {
   font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-extra);
   font-weight: 600;
   line-height: 1.2;
+  color: var(--color-text-main);
 }
 
 img {
@@ -61,25 +96,49 @@ ul {
   padding: 0 1.5rem;
 }
 
-.text-center { text-align: center; }
-.text-uppercase { text-transform: uppercase; }
-
-.section-title {
-  font-family: var(--font-serif);
-  font-size: 3rem;
-  color: var(--color-primary);
-  margin-bottom: 3rem;
+.text-center {
   text-align: center;
 }
 
-.section-subtitle {
-  font-family: var(--font-heading);
+.text-uppercase {
   text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--color-gold);
-  font-size: 0.9rem;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.section-subtitle {
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  font-weight: 600;
   margin-bottom: 1rem;
   display: block;
+}
+
+@media (max-width: 768px) {
+  .section-subtitle {
+    letter-spacing: 2px;
+    font-size: 0.7rem;
+  }
+}
+
+.highlight {
+  color: var(--color-accent);
 }
 
 /* Button Styles */
@@ -96,9 +155,17 @@ ul {
   border: 1px solid transparent;
 }
 
+@media (max-width: 768px) {
+  .btn {
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+  }
+}
+
 .btn-primary {
   background-color: var(--color-primary);
-  color: white;
+  color: var(--color-bg-light);
+  /* Snow */
 }
 
 .btn-primary:hover {
@@ -115,7 +182,8 @@ ul {
 
 .btn-outline:hover {
   background-color: var(--color-primary);
-  color: white;
+  color: var(--color-bg-light);
+  /* Snow */
 }
 
 /* Animations defaults */
@@ -124,6 +192,7 @@ ul {
   transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+
 .fade-in-up.visible {
   opacity: 1;
   transform: translateY(0);

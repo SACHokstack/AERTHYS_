@@ -9,9 +9,19 @@
 }
 
 .navbar.scrolled {
-    background-color: white;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    background-color: var(--color-bg-light);
+    box-shadow: 0 5px 20px rgba(30, 47, 35, 0.05);
     padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 0;
+    }
+
+    .navbar.scrolled {
+        padding: 0.75rem 0;
+    }
 }
 
 .navbar-container {
@@ -22,10 +32,18 @@
 
 .logo {
     font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-    color: white;
+    font-weight: 800;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    color: var(--color-primary);
+    /* Forest Green Logo */
+    transition: color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 1.3rem;
+    }
 }
 
 .navbar.scrolled .logo {
@@ -33,6 +51,21 @@
 }
 
 .nav-btn {
-    padding: 0.8rem 2rem;
-    font-size: 0.9rem;
+    padding: 0.8rem 2.2rem;
+    font-size: 0.85rem;
+    background-color: var(--color-accent);
+    color: var(--color-text-main);
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .nav-btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.75rem;
+    }
+}
+
+.nav-btn:hover {
+    background-color: white;
+    transform: translateY(-2px);
 }
